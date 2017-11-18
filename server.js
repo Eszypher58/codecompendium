@@ -7,12 +7,12 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/codecompendi
 const app = express();
 
 var userRoutes = require("./controllers/user_controller.js");
-//var savedItemRoutes = require("./controllers/savedItem_controller.js");
+var savedItemRoutes = require("./controllers/savedItem_controller.js");
 //var noteRoutes = require("./controllers/note_controller.js");
 
 app.use("/", userRoutes);
 console.log("print debug");
-//app.use("/", savedItemRoutes);
+app.use("/", savedItemRoutes);
 //app.use("/", noteRoutes);
 console.log("print debug 2");
 
