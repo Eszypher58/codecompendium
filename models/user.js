@@ -4,10 +4,30 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
 
+    id: {
+
+        type: String,
+
+    },
     user_name: {
 
         type: String,
 
+    },
+    display_name: {
+
+        type: String,
+
+    },
+    profileURL: {
+        
+        type: String,
+        
+    },
+    photo: {
+        
+        type: String,
+        
     },
     user_created_categories: {
 
@@ -20,7 +40,6 @@ var UserSchema = new Schema({
         ref: 'SavedItem'
 
     }]
-
 
 });
 

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div>
+
+        <h1>Hello World!</h1>
+
+        <hr>
+
+        <a href="/auth/github">Log In with OAuth 2.0 Provider</a>
+
+        <hr>
+
+        <form>
+            <p>Title</p>
+            <input id="title" placeholder="some text" type="text">
+            <p>Link</p>
+            <input id="link" placeholder="some text" type="text">
+            <!--should be drop down-->
+            <p>Categories</p>
+            <input id="categories" placeholder="some text" type="text">
+            <p>Description</p>
+            <input id="description" placeholder="some text" type="text">            
+            <button id="submit">Submit</button>
+        
+        </form>
+
+        <hr>
+
+        <div id="displayData">
+
+
+
+
+        </div>
+        
+
+    </div>
+
+  </body>
+
+    <script>
+    
+    $("#submit").on("click", function(e){
+
+        e.preventDefault();
+        console.log("clicked submit");
+        console.log(e);
+
+        const title = $("#title").val();
+        const link = $("#link").val();
+        const categories = $("#categories").val();
+        const description = $("#description").val();
+
+        const data = {
+
+            title: title,
+            link: link,
+            categories: categories,
+            description: description,
+
+        }
+
+        console.log(data);
+
+        $.ajax({
+
+            method:"POST",
+            url:"/save_entity",
+            data: data,
+
+        }).done(function(err, res){
+
+            console.log(err, res);
+
+        })
+
+
+    })
+    
+    </script>
+
+</html>
