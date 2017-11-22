@@ -1,21 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+
+// Components
+import Aside from './components/Aside';
+
+// Pages
+import MyBookmark from "./pages/MyBookmark";
+import MyCollection from "./pages/MyCollection";
+import ExploreBookmark from "./pages/ExploreBookmark";
+import ExploreCollection from "./pages/ExploreCollection";
+import Login from "./pages/Login";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <div className="App">
+          <div class="wrapper">
+
+            <Aside />
+            
+            <Switch>
+              <Route exact path="/" component={Login} />
+              <Route exact path="/mybookmark" component={MyBookmark} />
+              <Route exact path="/mycollection" component={MyCollection} />
+              <Route exact path="/explorebookmark" component={ExploreBookmark} />
+              <Route exact path="/explorecollection" component={ExploreCollection} />
+            </Switch>
+
+          </div>
+       </div>
+      </Router>
     );
   }
 }
 
 export default App;
+
+
+
