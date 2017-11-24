@@ -119,13 +119,12 @@ function(req, res) {
 
 
   console.log("need to redirect to my bookmark");
-  res.writeHead(302, {
-    "Location": "http://localhost:3000/mybookmark"
-})
+
   //console.log(res);
   //res.redirect('/mybookmark');
   //res.sendFile(path.join(__dirname, "./../client/public/index.html"));
   //res.json("in callback...");
+  res.end();
 });
 
 module.exports = router;
