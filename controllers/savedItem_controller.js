@@ -47,6 +47,20 @@ router.post("/save_entity", function(req, res){
 
 });
 
+router.get("/save_entity", function(req, res){
+
+    console.log("hit /save_entity with get");
+
+    
+    db.SavedItem.find({}, function(err, data){
+        
+                //res.redirect(req.get('referer'));
+        res.json(data);
+        
+    })
+
+})
+
 //this route gets all the saved items in a categories
 router.get("/global_saved_item/:categories", function(req, res){
 

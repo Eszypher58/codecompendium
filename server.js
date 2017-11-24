@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
+const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/codecompendiumDB";
 
@@ -46,6 +47,7 @@ function(accessToken, refreshToken, profile, done) {
 const app = express();
 
 app.use(partials());
+app.options("*",cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(methodOverride());
@@ -54,7 +56,6 @@ app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: fals
 // persistent login sessions (recommended).
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 
 const userRoutes = require("./controllers/user_controller.js");
@@ -84,12 +85,13 @@ app.get("*", function(req, res) {
 
 
 //test index.html to test backend items
-// app.get("/", function(req, res){
+/*
+app.get("*", function(req, res){
 
-//   res.sendFile(path.join(__dirname, "./testIndex.html"));
+   res.sendFile(path.join(__dirname, "./testIndex.html"));
 
-// })
-
+ })
+*/
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
