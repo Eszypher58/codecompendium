@@ -2,12 +2,21 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "auth/google": {
+      "target": "http://localhost:3001"
+    },
+    "auth/github": {
+      "target": "http://localhost:3001"
+    }
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "cookie-session": "^2.0.0-beta.3",
     "cors": "^2.8.4",
     "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
