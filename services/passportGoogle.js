@@ -31,11 +31,11 @@ passport.use(new GoogleStrategy(
 
         User.findOne({googleId: profile.id}, function (err, data){
 
-            console.log(profile);
+           // console.log(profile);
 
-            console.log("****** Printing existing user****");
-            console.log(data);
-            console.log("****** END Printing existing user****");
+           // console.log("****** Printing existing user****");
+            //console.log(data);
+            //console.log("****** END Printing existing user****");
               if (data) {
       
                   return done(null, data);

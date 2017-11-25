@@ -3,9 +3,10 @@ import axios from "axios";
 const data = {}
 
 console.log("before axios call");
-axios.get("/save_entity").then(res => {
+axios.get("/api/save_entity").then(res => {
 
-    console.log(res);
+    console.log(res.data);
+    initialState.itemArray = res.data;
 
 
 })

@@ -32,13 +32,13 @@ app.use(bodyParser.json());
 
 
 
-const userRoutes = require("./controllers/user_controller.js");
+//const userRoutes = require("./controllers/user_controller.js");
 const savedItemRoutes = require("./controllers/savedItem_controller.js");
 //const loginRoutes = require("./routes/githubOAuth.js");
 
 //app.use("/", loginRoutes);
 //app.use("/", userRoutes);
-//app.use("/", savedItemRoutes);
+app.use("/", savedItemRoutes);
 
 //---
 
@@ -51,6 +51,7 @@ const savedItemRoutes = require("./controllers/savedItem_controller.js");
 
 mongoose.Promise = Promise;
 mongoose.connect(keys.mongoURI);
+//mongoose.connect("mongodb://localhost/codecompendiumDB");
 
 app.use(cookieSession({
 

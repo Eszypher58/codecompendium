@@ -1,28 +1,26 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
-connect((store) => {
-
-  console.log(store);
-
-  return {
-
-    items: store.itemArray
-
-  }
-
-})
 
 
 const BookmarkList = (props) => {
+
+  console.log("this is the passed prop from mybookmark:", props);
+
+  const bookmarkedItem = props.bookmarks.bookmarkedItem;
+
   return (
     <div>
+
       <h3 className="title">JavaScript</h3>
+
+
+
+
         <div>
           <a href="#">
             <div className="card">
               <div className="img-container">
-                <i class="fa fa-plus-circle add-new-icon" aria-hidden="true"></i>
+                <i className="fa fa-plus-circle add-new-icon" aria-hidden="true"></i>
               </div>
               <div className="content">
                 <a href="#">Add bookmark</a>
@@ -30,9 +28,42 @@ const BookmarkList = (props) => {
             </div>
          </a>
         </div>
+
+        {bookmarkedItem.length ? 
+                          
+          (bookmarkedItem.map(item => {
+
+            const {title, link, date, description, categories, _id} = item;
+
+              return (
+                <div className="card">
+                <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.deleteButton}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                <div className="img-container">
+                  <img src="/assets/javascript.png" alt={categories} />
+                </div>
+      
+                <div className="content">
+                  <a href={link} target="_blank">{title}</a>
+
+                  <p>{description}</p>
+      
+                  <div className="user">
+                    <a href="#"><span>Guilherme Henrique</span></a>
+                  </div>
+      
+                  <div className="like">
+                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>223</span> likes
+                  </div>
+      
+                </div>
+              </div>
+              )
+
+        })) : (<h3>No Saved Article</h3>) }
+
             
         <div className="card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+          <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
           <div className="img-container">
             <img src="http://blog.teamtreehouse.com/wp-content/uploads/2014/05/codingconfidence.jpg" alt="Mountain View" />
           </div>
@@ -45,14 +76,14 @@ const BookmarkList = (props) => {
             </div>
 
             <div className="like">
-              <a href="#"><i class="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>223</span> likes
+              <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>223</span> likes
             </div>
 
           </div>
         </div>
 
         <div className="card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+          <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
           <div className="img-container">
             <img src="http://ng-center.com/wp-content/uploads/2016/05/UX-developer-01.jpg" alt="Mountain View" />
           </div>
@@ -65,14 +96,14 @@ const BookmarkList = (props) => {
             </div>
 
             <div className="like">
-              <a href="#"><i class="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>51</span> likes
+              <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>51</span> likes
             </div>
 
           </div>
         </div>
 
         <div className="card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+          <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
           <div className="img-container">
             <img src="https://udemy-images.udemy.com/course/750x422/260756_bac8_3.jpg" alt="Mountain View" />
           </div>
@@ -85,14 +116,14 @@ const BookmarkList = (props) => {
             </div>
 
             <div className="like">
-              <a href="#"><i class="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>105</span> likes
+              <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>105</span> likes
             </div>
 
           </div>
         </div>
 
         <div className="card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+          <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
           <div className="img-container">
             <img src="https://h2ctwnk7c3-flywheel.netdna-ssl.com/wp-content/uploads/2016/02/web-developer.jpg" alt="Mountain View" />
           </div>
@@ -105,14 +136,14 @@ const BookmarkList = (props) => {
             </div>
 
             <div className="like">
-              <a href="#"><i class="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>34</span> likes
+              <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>34</span> likes
             </div>
 
           </div>
         </div>
 
         <div className="card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+          <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
           <div className="img-container">
             <img src="https://cdn-images-1.medium.com/max/1600/1*WWyilxdduXEkWudAJaqKsA.jpeg" alt="Mountain View" />
           </div>
@@ -125,28 +156,12 @@ const BookmarkList = (props) => {
             </div>
 
             <div className="like">
-              <a href="#"><i class="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>16</span> likes
+              <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>16</span> likes
             </div>
 
           </div>
         </div>
 
-        <hr></hr>
-
-        <form>
-            <p>Title</p>
-            <input id="title" placeholder="some text" type="text"></input>
-            <p>Link</p>
-            <input id="link" placeholder="some text" type="text"></input>
-            <p>Categories</p>
-            <input id="categories" placeholder="some text" type="text"></input>
-            <p>Description</p>
-            <input id="description" placeholder="some text" type="text"></input>     
-            <button id="submit">Submit</button>
-        
-        </form>
-
-        <hr></hr>
    
     </div>
   );

@@ -61,21 +61,6 @@
         $('#sidebar').toggleClass('active');
       });
 
-      $("#loginButton").on("click", function(e){
-
-        e.preventDefault();
-
-        console.log("clicked loginButton");
-
-        $.get({
-
-          url: "/auth/github",
-
-        }).done();
-
-
-      })
-
       $("#submit").on("click", function(e){
 
         e.preventDefault();
@@ -101,7 +86,7 @@
         $.ajax({
 
             method:"POST",
-            url:"/save_entity",
+            url:"/api/save_entity",
             data: data,
 
         }).done(function(err, res){
@@ -110,6 +95,17 @@
 
         })
 
+
+    })
+
+    $(".deleteButton").on("click", function(e){
+      
+
+      e.preventDefault();
+
+      console.log($(this));
+
+      console.log("clicked delete Button");
 
     })
 

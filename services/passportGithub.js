@@ -3,15 +3,16 @@ const GithubStrategy = require("passport-github2").Strategy;
 const mongoose = require("mongoose");
 const keys = require("../config/keys");
 
-const User = mongoose.model('usersGithub');
+const UserGithub = mongoose.model('usersGithub');
 
 passport.serializeUser((user, done) => {
-    //console.log(user);
+    console.log("in serialize");
     done(null, user.id);
   });
   
   passport.deserializeUser((id, done) => {
-    User.findById(id).then(user => {
+    console.log("in deserialize");
+    UserGithub.findById(id).then(user => {
       done(null, user);
     })
   });
@@ -28,8 +29,10 @@ passport.serializeUser((user, done) => {
       const {id, displayName, username, profileURL} = profile;
   
       const profilePhoto = profile.photos[0].value;
+
+      console.log(profile);
   
-      User.find({
+      UserGithub.find({
   
         githubId: id,
   
@@ -44,7 +47,7 @@ passport.serializeUser((user, done) => {
   
           console.log("did not find user, add him or her");
   
-          User.create({
+          UserGithub.create({
             
                       githubId: id,
                       display_name: displayName,

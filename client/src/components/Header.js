@@ -11,11 +11,11 @@ const Header = (props) => {
           </button>
 
           <div id="search-input">
-            <div class="input-group col-sm-12">
-                <input type="text" class="form-control" placeholder="Search bookmark" />
-                <span class="input-group-btn">
-                    <button class="btn" type="button">
-                        <i class="glyphicon glyphicon-search"></i>
+            <div className="input-group col-sm-12">
+                <input type="text" className="form-control" placeholder="Search bookmark" />
+                <span className="input-group-btn">
+                    <button className="btn" type="button">
+                        <i className="glyphicon glyphicon-search"></i>
                     </button>
                 </span>
             </div>
