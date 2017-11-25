@@ -5,7 +5,7 @@ const express = require("express");
 const router = express.Router();
 
 //this route is hit when user wants to save items (link/text)
-router.post("/save_entity", function(req, res){
+router.post("/api/save_entity", function(req, res){
 
     console.log("hit /save_entity with post");
 
@@ -47,7 +47,7 @@ router.post("/save_entity", function(req, res){
 
 });
 
-router.get("/save_entity", function(req, res){
+router.get("/api/save_entity", function(req, res){
 
     console.log("hit /save_entity with get");
 
@@ -59,6 +59,24 @@ router.get("/save_entity", function(req, res){
         
     })
 
+})
+
+router.delete("/api/remove_entity/:id", function(req, res){
+    
+        console.log("hit /remove_entity with delete");
+    
+        console.log(req.params.id);
+
+        const id=req.params.id;
+
+        
+        db.SavedItem.findById(id).remove(function(data){
+            
+            console.log(data);
+            res.json(data);
+            
+        })
+    
 })
 
 //this route gets all the saved items in a categories

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
-var UserSchema = new Schema({
+var UserGithubSchema = new Schema({
     
         githubId: {
     
@@ -43,4 +43,4 @@ var UserSchema = new Schema({
     
     });
 
-mongoose.model("usersGithub", UserSchema);
+mongoose.model("usersGithub", UserGithubSchema);

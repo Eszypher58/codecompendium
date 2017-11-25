@@ -3,9 +3,19 @@ import React, { Component } from "react";
 
 
 const BookmarkList = (props) => {
+
+  console.log("this is the passed prop from mybookmark:", props);
+
+  const bookmarkedItem = props.bookmarks.bookmarkedItem;
+
   return (
     <div>
+
       <h3 className="title">JavaScript</h3>
+
+
+
+
         <div>
           <a href="#">
             <div className="card">
@@ -18,6 +28,39 @@ const BookmarkList = (props) => {
             </div>
          </a>
         </div>
+
+        {bookmarkedItem.length ? 
+                          
+          (bookmarkedItem.map(item => {
+
+            const {title, link, date, description, categories, _id} = item;
+
+              return (
+                <div className="card">
+                <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.deleteButton}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                <div className="img-container">
+                  <img src="/assets/javascript.png" alt={categories} />
+                </div>
+      
+                <div className="content">
+                  <a href={link} target="_blank">{title}</a>
+
+                  <p>{description}</p>
+      
+                  <div className="user">
+                    <a href="#"><span>Guilherme Henrique</span></a>
+                  </div>
+      
+                  <div className="like">
+                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>223</span> likes
+                  </div>
+      
+                </div>
+              </div>
+              )
+
+        })) : (<h3>No Saved Article</h3>) }
+
             
         <div className="card">
           <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
@@ -119,22 +162,6 @@ const BookmarkList = (props) => {
           </div>
         </div>
 
-        <hr></hr>
-
-        <form>
-            <p>Title</p>
-            <input id="title" placeholder="some text" type="text"></input>
-            <p>Link</p>
-            <input id="link" placeholder="some text" type="text"></input>
-            <p>Categories</p>
-            <input id="categories" placeholder="some text" type="text"></input>
-            <p>Description</p>
-            <input id="description" placeholder="some text" type="text"></input>     
-            <button id="submit">Submit</button>
-        
-        </form>
-
-        <hr></hr>
    
     </div>
   );

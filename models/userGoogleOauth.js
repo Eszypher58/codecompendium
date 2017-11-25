@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
-var UserSchema = new Schema({
+var UserGoogleSchema = new Schema({
 
     googleId: {
         
@@ -37,7 +37,7 @@ var UserSchema = new Schema({
 
 });
 
-mongoose.model("usersGoogle", UserSchema);
+mongoose.model("usersGoogle", UserGoogleSchema);
 
 /*
 var UserSchema = new Schema({
