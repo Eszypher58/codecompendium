@@ -1,4 +1,18 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+connect((store) => {
+
+  console.log(store);
+
+  return {
+
+    items: store.itemArray
+
+  }
+
+})
+
 
 const BookmarkList = (props) => {
   return (
@@ -117,6 +131,22 @@ const BookmarkList = (props) => {
           </div>
         </div>
 
+        <hr></hr>
+
+        <form>
+            <p>Title</p>
+            <input id="title" placeholder="some text" type="text"></input>
+            <p>Link</p>
+            <input id="link" placeholder="some text" type="text"></input>
+            <p>Categories</p>
+            <input id="categories" placeholder="some text" type="text"></input>
+            <p>Description</p>
+            <input id="description" placeholder="some text" type="text"></input>     
+            <button id="submit">Submit</button>
+        
+        </form>
+
+        <hr></hr>
    
     </div>
   );

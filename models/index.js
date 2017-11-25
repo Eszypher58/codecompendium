@@ -1,6 +1,7 @@
 module.exports = {
     
-        User: require("./user"),
+        UserGoogle: require("./userGoogleOauth"),
+        UserGithub: require("./userGoogleOauth"),
         SavedItem: require("./savedItem"),
     
 };

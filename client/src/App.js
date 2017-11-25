@@ -11,15 +11,16 @@ import MyCollection from "./pages/MyCollection";
 import ExploreBookmark from "./pages/ExploreBookmark";
 import ExploreCollection from "./pages/ExploreCollection";
 import Login from "./pages/Login";
+import Check from "./pages/Check";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <div class="wrapper">
+          <div className="wrapper">
 
-            <Aside />
+            {/*<Aside />*/}
             
             <Switch>
               <Route exact path="/" component={Login} />
