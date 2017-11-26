@@ -6,7 +6,7 @@ const BookmarkList = (props) => {
 
   console.log("this is the passed prop from mybookmark:", props);
 
-  const bookmarkedItem = props.bookmarks.bookmarkedItem;
+  const bookmarkedItem = props.bookmarks;
 
   return (
     <div>
@@ -48,7 +48,7 @@ const BookmarkList = (props) => {
                   <p>{description}</p>
       
                   <div className="user">
-                    <a href="#"><span>Guilherme Henrique</span></a>
+                    <a href="#"><span>{props.name}</span></a>
                   </div>
       
                   <div className="like">
