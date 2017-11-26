@@ -5,8 +5,8 @@ const data = {}
 console.log("before axios call");
 axios.get("/api/save_entity").then(res => {
 
-    console.log(res.data);
-    initialState.itemArray = res.data;
+    //console.log(res.data);
+    //initialState.itemArray = res.data;
 
 
 })

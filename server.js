@@ -50,8 +50,8 @@ app.use("/", savedItemRoutes);
 //---
 
 mongoose.Promise = Promise;
-mongoose.connect(keys.mongoURI);
-//mongoose.connect("mongodb://localhost/codecompendiumDB");
+//mongoose.connect(keys.mongoURI);
+mongoose.connect("mongodb://localhost/codecompendiumDB");
 
 app.use(cookieSession({
 
