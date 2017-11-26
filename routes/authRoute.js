@@ -16,7 +16,7 @@ module.exports = app => {
         console.log(req.user);
         console.log("***END***");
       
-      res.redirect('http://localhost:3000/'+ req.user.googleId +'/mybookmark');
+      res.redirect('/' + req.user.googleId +'/mycollection');
     });
 
 
