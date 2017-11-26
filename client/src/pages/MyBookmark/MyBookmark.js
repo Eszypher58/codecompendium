@@ -8,11 +8,11 @@ import parseURL from "parse-url";
 import Aside from '../../components/Aside';
 import Header from "../../components/Header";
 import BookmarkList from "../../components/BookmarkList";
+import AddBookmark from "../../components/AddBookmark";
 
 class MyBookmark extends Component {
 
   state = {
-
     bookmarkedItem: [],
     userName: "",
     userId: "",
@@ -34,47 +34,33 @@ class MyBookmark extends Component {
 
       this.setState({userName: res.data});
 
-    }))
+  }))
 
-    axios.get("/api/save_entity/" + id).then((res) => {
+  axios.get("/api/save_entity/" + id).then((res) => {
 
-      console.log("mybookmark => componentDidMount")
+    console.log("mybookmark => componentDidMount")
+    //console.log(res);
 
-      //console.log(res);
-
-      this.setState({bookmarkedItem: res.data});
-
-      //console.log(this.state.bookmarkedItem);
-
+    this.setState({bookmarkedItem: res.data});
+    //console.log(this.state.bookmarkedItem);
     })
-
   }
 
   handleTitle = (e) => {
-    
     this.setState({title: e.target.value})
-    
   }
 
   handleLink = (e) => {
-    
     this.setState({link: e.target.value})
-    
   }
 
   handleCategories = (e) => {
-    
     this.setState({categories: e.target.value})
-    
   }
 
   handleDescription = (e) => {
-    
     this.setState({description: e.target.value})
-    
   }
-
-
 
   handleDeleteButton = (e) => {
     
@@ -100,7 +86,7 @@ class MyBookmark extends Component {
         this.setState({bookmarkedItem:res.data})
     
     }).catch(err => console.log(err));
-}
+  }
 
 handleSubmitButton = (e) => {
   
@@ -133,9 +119,10 @@ handleSubmitButton = (e) => {
 
   render() {
     return (
-      
-      <div id="content">
-        <Header />
+      <div class="wrapper">
+        <Aside />
+        
+        <div id="content">
         <BookmarkList bookmarks={this.state.bookmarkedItem} name={this.state.userName} deleteButton={this.handleDeleteButton}/>
 
 
@@ -155,10 +142,8 @@ handleSubmitButton = (e) => {
         </form>
 
         <hr></hr>
-
-
+        </div>
       </div>
-      
     );
   }
 }

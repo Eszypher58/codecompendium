@@ -46,7 +46,7 @@ const Aside = (props) => {
       </ul>
 
       <ul className="list-unstyled CTAs">
-        <li><a href="https://github.com/Eszypher58/codecompendium" target="_blank" id="github"><i className="fa fa-github-alt" aria-hidden="true"></i> Github Repo</a></li>
+        <li><a href="https://github.com/Eszypher58/codecompendium" target="_blank" id="github"><i class="fa fa-github" aria-hidden="true"></i> Github Repo</a></li>
       </ul>
     </nav>
  );
