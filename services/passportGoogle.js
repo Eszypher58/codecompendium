@@ -19,7 +19,7 @@ passport.serializeUser((user, done) => {
   const googleClientID = process.env.googleClientID || keys.googleClientID;
   const googleClientSecret = process.env.googleClientSecret || keys.googleClientSecret;
 
-  console.log(googleClientID);
+  //console.log(googleClientID);
 
 passport.use(new GoogleStrategy(
     {

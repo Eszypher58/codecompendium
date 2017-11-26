@@ -17,10 +17,13 @@ passport.serializeUser((user, done) => {
     })
   });
   
+  const githubClientID = process.env.githubClientID || keys.githubClientID;
+  const githubClientSecret = process.env.githubClientSecret || keys.githubClientSecret;
+
 
   passport.use(new GithubStrategy({
-    clientID: keys.githubClientID,
-    clientSecret: keys.githubClientSecret,
+    clientID: githubClientID,
+    clientSecret: githubClientSecret,
     callbackURL: "http://127.0.0.1:3001/auth/github/callback",
     proxy: true
   },
