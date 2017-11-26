@@ -7,7 +7,7 @@ import ExpressjsIMG from ".././assets/express.png";
 const CollectionList = (props) => {
   return (
     <div>
-      <h3 className="title">{props.title}</h3>
+      <h3 className="title">{props.title}'s Collection</h3>
 
         <div>
           <a href="#">

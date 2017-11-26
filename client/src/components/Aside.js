@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 const Aside = (props) => {
+
+  console.log(props);
+
   return ( 
     <nav id="sidebar">
       <div className="sidebar-header">
@@ -12,11 +15,11 @@ const Aside = (props) => {
         <li className="active">
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true">My Collections</a>
             <ul className="list-unstyled" id="homeSubmenu">
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="false"></i> JavaScript</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="false"></i> Node.js</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="false"></i> Express.js</a></li>
+              <li><a href={"/"+ props.userId + "/mycollection"} ><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/react"}><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/javascript"}><i className="fa fa-folder-o" aria-hidden="false"></i> JavaScript</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node.js</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/express"}><i className="fa fa-folder-o" aria-hidden="false"></i> Express.js</a></li>
             </ul>
         </li>
 

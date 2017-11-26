@@ -24,7 +24,7 @@ passport.serializeUser((user, done) => {
   passport.use(new GithubStrategy({
     clientID: githubClientID,
     clientSecret: githubClientSecret,
-    callbackURL: "http://127.0.0.1:3001/auth/github/callback",
+    callbackURL: "/auth/github/callback",
     proxy: true
   },
   function(accessToken, refreshToken, profile, done) {

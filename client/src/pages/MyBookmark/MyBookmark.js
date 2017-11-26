@@ -18,15 +18,20 @@ class MyBookmark extends Component {
     userId: "",
     title: "",
     link: "",
-    categories: "",
+    selectedCategory: "",
     description: "",
   }
 
   componentDidMount(){
 
     const id = parseURL(window.location.href).pathname.split("/")[1]; 
-    console.log(id);
+    //console.log(id);
+    //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
+    const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
+    console.log(id, selectedCategory);
     this.setState({userId: id});
+    this.setState({selectedCategory: selectedCategory.toUpperCase()});
+    console.log(this.state.selectedCategory);
 
     axios.get("/api/name/" + id).then((res => {
 
@@ -71,16 +76,6 @@ class MyBookmark extends Component {
     let id = e.target.id;
     
     axios.delete("/api/remove_entity/" + id).then(res => {
-    
-      /*
-        console.log(res);
-        axios.get("/api/save_entity/" + id).then(res => {
-            
-          console.log(res.data);
-          this.setState({bookmarkedItem: res.data})
-            
-        })
-        */
 
         console.log(res.data);
         this.setState({bookmarkedItem:res.data})
@@ -91,9 +86,6 @@ class MyBookmark extends Component {
 handleSubmitButton = (e) => {
   
   e.preventDefault();
-
-  //console.log(this.state);
-  //console.log(e.target);
   
   let id = e.target.id;
 
@@ -120,10 +112,14 @@ handleSubmitButton = (e) => {
   render() {
     return (
       <div class="wrapper">
-        <Aside />
+        <Aside userId={this.state.userId}/>
         
         <div id="content">
-        <BookmarkList bookmarks={this.state.bookmarkedItem} name={this.state.userName} deleteButton={this.handleDeleteButton}/>
+        <BookmarkList 
+          bookmarks={this.state.bookmarkedItem} 
+          name={this.state.userName}
+          category={this.state.selectedCategory} 
+          deleteButton={this.handleDeleteButton}/>
 
 
         <hr></hr>

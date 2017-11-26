@@ -11,7 +11,7 @@ const BookmarkList = (props) => {
   return (
     <div>
 
-      <h3 className="title">JavaScript</h3>
+      <h3 className="title">{props.category}</h3>
 
 
 

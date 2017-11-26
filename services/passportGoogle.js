@@ -19,13 +19,11 @@ passport.serializeUser((user, done) => {
   const googleClientID = process.env.googleClientID || keys.googleClientID;
   const googleClientSecret = process.env.googleClientSecret || keys.googleClientSecret;
 
-  //console.log(googleClientID);
-
 passport.use(new GoogleStrategy(
     {
     clientID: googleClientID,
     clientSecret: googleClientSecret,
-    callbackURL: "http://localhost:3001/auth/google/callback",
+    callbackURL: "/auth/google/callback",
     proxy: true
   }, function(accessToken, refreshToken, profile, done) {
   
