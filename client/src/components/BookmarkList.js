@@ -59,7 +59,7 @@ const BookmarkList = (props) => {
               </div>
               )
 
-        })) : (<h3>No Saved Article</h3>) }
+        })) : (<h3></h3>) }
 
             
         <div className="card">

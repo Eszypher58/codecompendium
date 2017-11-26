@@ -29,7 +29,7 @@ const CollectionList = (props) => {
           </div>
 
           <div className="content">
-            <a href="#">React</a>
+            <a href={"/"+ props.userId + "/mybookmark/react"}>React</a>
             <div className="file">
               <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
             </div>
@@ -43,7 +43,7 @@ const CollectionList = (props) => {
           </div>
 
           <div className="content">
-            <a href="#">JavaScript</a>
+            <a href={"/"+ props.userId + "/mybookmark/javascript"}>JavaScript</a>
             <div className="file">
               <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>23</span> files
             </div>
@@ -57,7 +57,7 @@ const CollectionList = (props) => {
           </div>
 
           <div className="content">
-            <a href="#">Express.js</a>
+            <a href={"/"+ props.userId + "/mybookmark/node"}>Node.js</a>
             <div className="file">
               <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>2</span> files
             </div>
@@ -71,7 +71,7 @@ const CollectionList = (props) => {
           </div>
 
           <div className="content">
-            <a href="#">Node.js</a>
+            <a href={"/"+ props.userId + "/mybookmark/express"}>Express.js</a>
             <div className="file">
               <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>8</span> files
             </div>
