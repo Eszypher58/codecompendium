@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 //const cors = require("cors");
 const PORT = process.env.PORT || 3001;
-//const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/codecompendiumDB";
+
 
 //------
 
@@ -48,9 +48,9 @@ app.use("/", savedItemRoutes);
 
 
 //---
-
+const MONGODB_URI = process.env.MONGODB_URI || keys.mongoURI;
 mongoose.Promise = Promise;
-mongoose.connect(keys.mongoURI);
+mongoose.connect(MONGODB_URI);
 //mongoose.connect("mongodb://localhost/codecompendiumDB");
 
 app.use(cookieSession({
