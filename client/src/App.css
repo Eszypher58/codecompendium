@@ -160,7 +160,7 @@ ul ul a:hover {
   letter-spacing: 1px;
   margin-left: 20px;
   margin-bottom: 40px;
-  margin-top: -10px;
+  margin-top: 40px;
   color: #767676;
 }
 
@@ -266,6 +266,48 @@ ul ul a:hover {
   font-size: 13px;
 }
 
+
+/* ---------------------------------------------------
+    Login
+----------------------------------------------------- */
+#logo {
+  width: 250px;
+  margin-top: 10px;
+}
+
+.login {
+  height: 350px;
+  width: 310px;
+  border: 1px solid #e8e8e8;
+  margin-top: 200px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.github-login {
+  margin-top: 40px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.github-login:hover {
+ color: #fff;
+ background: #333;
+}
+
+
+/* ---------------------------------------------------
+    Modal
+----------------------------------------------------- */
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: #333;
+}
 
 
 /* ---------------------------------------------------
