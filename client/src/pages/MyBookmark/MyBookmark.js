@@ -9,6 +9,7 @@ import Aside from '../../components/Aside';
 import Header from "../../components/Header";
 import BookmarkList from "../../components/BookmarkList";
 import AddBookmark from "../../components/AddBookmark";
+import DeleteBookmark from "../../components/DeleteBookmark";
 
 class MyBookmark extends Component {
 
@@ -18,8 +19,12 @@ class MyBookmark extends Component {
     userId: "",
     title: "",
     link: "",
+    categories: "HTML",
     selectedCategory: "",
     description: "",
+    deleteId: "",
+    isOpenAdd: false,
+    isOpenDelete: false
   }
 
   componentDidMount(){
@@ -49,6 +54,25 @@ class MyBookmark extends Component {
     this.setState({bookmarkedItem: res.data});
     //console.log(this.state.bookmarkedItem);
     })
+  }
+
+  toggleAddBookmark = () => {
+
+    console.log("clicked add bookmark");
+
+    this.setState({
+      isOpenAdd: !this.state.isOpenAdd
+    });
+  }
+
+  toggleDeleteBookmark = (e) => {
+
+    console.log(e.target.id);
+
+    this.setState({
+      isOpenDelete: !this.state.isOpenDelete,
+      deleteId: e.target.id,
+    });
   }
 
   handleTitle = (e) => {
@@ -89,6 +113,8 @@ handleSubmitButton = (e) => {
   
   let id = e.target.id;
 
+  console.log(id);
+
   const {title, link, categories, description } = this.state;
 
   let item = {
@@ -100,10 +126,12 @@ handleSubmitButton = (e) => {
 
   }
 
+  console.log("item is:", item);
+
   axios.post("/api/save_entity/" + id, {item}).then(res => {
 
     //console.log(res.data);
-    this.setState({bookmarkedItem: res.data})
+    this.setState({bookmarkedItem: res.data, isOpenAdd: false,})
 
   }).catch(err => console.log(err));
   
@@ -119,26 +147,69 @@ handleSubmitButton = (e) => {
           bookmarks={this.state.bookmarkedItem} 
           name={this.state.userName}
           category={this.state.selectedCategory} 
-          deleteButton={this.handleDeleteButton}/>
-
-
-        <hr></hr>
-
-        <form>
-            <p>Title</p>
-            <input id="title" placeholder="some text" type="text" onChange={this.handleTitle}></input>
-            <p>Link</p>
-            <input id="link" placeholder="some text" type="text" onChange={this.handleLink}></input>
-            <p>Categories</p>
-            <input id="categories" placeholder="some text" type="text" onChange={this.handleCategories}></input>
-            <p>Description</p>
-            <input id="description" placeholder="some text" type="text" onChange={this.handleDescription}></input>     
-            <button id={this.state.userId} onClick={this.handleSubmitButton}>Submit</button>
-        
-        </form>
-
-        <hr></hr>
+          onClickDelete={this.toggleDeleteBookmark}
+          onClick={this.toggleAddBookmark} 
+          />
         </div>
+
+        <AddBookmark show={this.state.isOpenAdd}
+            onClose={this.toggleAddBookmark}
+            onAdd={this.handleSubmitButton}
+            userId={this.state.userId}>
+            <h3>Add Bookmark</h3>
+            <hr />
+            <form>
+              <div class="form-group">
+                <label for="collection">Choose collection</label>
+                <select class="form-control" id="collection" value={this.state.categories} onChange={this.handleCategories}>
+                  <option>HTML</option>
+                  <option>CSS</option>
+                  <option>JavaScript</option>
+                  <option>jQuery</option>
+                  <option>Bootstrap</option>
+                  <option>Material UI</option>
+                  <option>Node.js</option>
+                  <option>Express.js</option>
+                  <option>MySQL</option>
+                  <option>MongoDB</option>
+                  <option>AJAX</option>
+                  <option>API</option>
+                  <option>AngularJS</option>
+                  <option>React</option>
+                  <option>MISC</option>
+                  <option>Humor</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label htmlFor="link">Link</label>
+                <input type="text" class="form-control" id="link" onChange={this.handleLink}/>
+              </div>
+
+              <div class="form-group">
+                <label htmlFor="title">Title</label>
+                <input type="text" class="form-control" id="title" onChange={this.handleTitle}/>
+              </div>
+
+              <div class="form-group">
+                <label htmlFor="text">Text</label>
+                <textarea class="form-control" id="text" rows="3" onChange={this.handleDescription}></textarea>
+              </div>
+            </form>
+            <hr />
+          </AddBookmark>
+
+          <DeleteBookmark show={this.state.isOpenDelete}
+            onClose={this.toggleDeleteBookmark}
+            onDelete={this.handleDeleteButton}
+            bookmarkId={this.state.deleteId}>
+            <h3>Are you sure?</h3>
+            <hr />
+            <p>Once you delete a bookmark, you can't undo it!</p>
+            <hr />
+          </DeleteBookmark>
+
+
       </div>
     );
   }

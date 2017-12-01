@@ -17,7 +17,7 @@ const BookmarkList = (props) => {
 
 
         <div>
-          <a href="#">
+        <a href="#" onClick={props.onClick}>
             <div className="card">
               <div className="img-container">
                 <i className="fa fa-plus-circle add-new-icon" aria-hidden="true"></i>
@@ -26,18 +26,18 @@ const BookmarkList = (props) => {
                 <a href="#">Add bookmark</a>
               </div>
             </div>
-         </a>
+            </a>
         </div>
 
         {bookmarkedItem.length ? 
                           
           (bookmarkedItem.map(item => {
 
-            const {title, link, date, description, categories, _id} = item;
+            const {title, link, date, description, categories, like, dislike, _id} = item;
 
               return (
                 <div className="card">
-                <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.deleteButton}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
                 <div className="img-container">
                   <img src="/assets/javascript.png" alt={categories} />
                 </div>
@@ -52,7 +52,7 @@ const BookmarkList = (props) => {
                   </div>
       
                   <div className="like">
-                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>223</span> likes
+                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>{like}</span> likes
                   </div>
       
                 </div>
