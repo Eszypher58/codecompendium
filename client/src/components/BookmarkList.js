@@ -35,6 +35,8 @@ const BookmarkList = (props) => {
 
             const {title, link, date, description, categories, like, dislike, _id} = item;
 
+            if (categories.toUpperCase() === props.category){
+
               return (
                 <div className="card">
                 <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
@@ -59,7 +61,7 @@ const BookmarkList = (props) => {
               </div>
               )
 
-        })) : (<h3></h3>) }
+        }})) : (<h3></h3>) }
 
             
         <div className="card">
