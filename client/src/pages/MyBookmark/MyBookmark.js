@@ -101,8 +101,8 @@ class MyBookmark extends Component {
     
     axios.delete("/api/remove_entity/" + id).then(res => {
 
-        console.log(res.data);
-        this.setState({bookmarkedItem:res.data})
+        console.log("data from remove entity (delete button)", res.data);
+        this.setState({bookmarkedItem:res.data, isOpenDelete: false,})
     
     }).catch(err => console.log(err));
   }
@@ -130,7 +130,17 @@ class MyBookmark extends Component {
 
     axios.post().then(res => {
       
-            
+      console.log(e.target.id);
+      
+      let id = e.target.id;
+  
+      axios.post("/api/dislike/" + id).then(res => {
+  
+        console.log("data returned from /api/dislike/", res.data);
+  
+        this.setState({bookmarkedItem:res.data})
+  
+      }).catch(err => console.log(err));
       
       
     })
@@ -234,7 +244,8 @@ handleSubmitButton = (e) => {
           <DeleteBookmark show={this.state.isOpenDelete}
             onClose={this.toggleDeleteBookmark}
             onDelete={this.handleDeleteButton}
-            bookmarkId={this.state.deleteId}>
+            bookmarkId={this.state.deleteId}
+            userId={this.state.userId}>
             <h3>Are you sure?</h3>
             <hr />
             <p>Once you delete a bookmark, you can't undo it!</p>
