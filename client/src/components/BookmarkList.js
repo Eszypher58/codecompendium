@@ -54,7 +54,7 @@ const BookmarkList = (props) => {
                   </div>
       
                   <div className="like">
-                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true"></i></a> <span>{like}</span> likes
+                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true" onClick={props.onClickLike} id={_id + "&" + props.userId}></i></a> <span>{like}</span> likes
                   </div>
       
                 </div>

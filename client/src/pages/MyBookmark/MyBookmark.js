@@ -107,6 +107,36 @@ class MyBookmark extends Component {
     }).catch(err => console.log(err));
   }
 
+  handleLike = (e) => {
+
+    e.preventDefault();
+
+    console.log(e.target.id);
+    
+    let id = e.target.id;
+
+    axios.post("/api/like/" + id).then(res => {
+
+      console.log("data returned from /api/like/", res.data);
+
+      this.setState({bookmarkedItem:res.data})
+
+    }).catch(err => console.log(err));
+
+
+  }
+
+  handleDislike = (e) => {
+
+    axios.post().then(res => {
+      
+            
+      
+      
+    })
+
+  }
+
 handleSubmitButton = (e) => {
   
   e.preventDefault();
@@ -146,9 +176,11 @@ handleSubmitButton = (e) => {
         <BookmarkList 
           bookmarks={this.state.bookmarkedItem} 
           name={this.state.userName}
+          userId={this.state.userId}
           category={this.state.selectedCategory} 
           onClickDelete={this.toggleDeleteBookmark}
-          onClick={this.toggleAddBookmark} 
+          onClick={this.toggleAddBookmark}
+          onClickLike={this.handleLike} 
           />
         </div>
 
