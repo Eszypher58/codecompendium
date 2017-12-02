@@ -143,6 +143,56 @@ router.delete("/api/remove_entity/:id", function(req, res){
     
 })
 
+router.post("/api/like/:id", function(req, res){
+
+    console.log(req.params.id.split("&"));
+    
+    const id=req.params.id.split("&")[0];
+    const userId=req.params.id.split("&")[1];
+
+
+    db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { like: 1 } }, { new: true }).then(function(doc){
+        
+                    //console.log(doc);
+                    //res.json(doc);
+        
+                    User.findOne({googleId: userId}).populate("savedItem").then(function(data){
+                        
+                            //res.render("save", {data: data});
+                            console.log(data.savedItem);
+                            res.json(data.savedItem);
+                        
+                    })
+        
+    }).catch(err => console.log(err));
+
+})
+
+router.post("/api/dislike/:id", function(req, res){
+    
+        console.log(req.params.id.split("&"));
+        
+        const id=req.params.id.split("&")[0];
+        const userId=req.params.id.split("&")[1];
+    
+    
+        db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { dislike: 1 } }, { new: true }).then(function(doc){
+            
+                        //console.log(doc);
+                        //res.json(doc);
+            
+                        User.findOne({googleId: userId}).populate("savedItem").then(function(data){
+                            
+                                //res.render("save", {data: data});
+                                console.log(data.savedItem);
+                                res.json(data.savedItem);
+                            
+                        })
+            
+        }).catch(err => console.log(err));
+    
+    })
+
 //this route gets all the saved items in a categories
 router.get("/global_saved_item/:categories", function(req, res){
 
