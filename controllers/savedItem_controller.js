@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const db = require("./../models");
 const express = require("express");
 const User = mongoose.model('usersGoogle');
+const metafetch = require("metafetch");
+const metaget = require("metaget");
 const router = express.Router();
 
 //this route is hit when user wants to save items and returns as json array of saveItems; it is hit when user clicked add inside the modal;
@@ -15,33 +17,51 @@ router.post("/api/save_entity/:id", function(req, res){
 
     const {title, link, categories, description} = entity.item;
 
+    let metaImg = "";
+
+    metaget.fetch(link, (err, meta_res) => {
+
+        console.log(meta_res);
+
+        
+    if (meta_res["og:image"]){
+    
+        metaImg = meta_res["og:image"];
+    
+    };
+
     //the data from front end is saved into this object, to be placed into mongodb
     let savedItem = {
+        
+                title: title,
+                link: link,
+                categories: categories,
+                description: description,
+                meta_tag_link: metaImg,
+                time_stamp: Date.now(),
+                like: 0,
+                dislike: 0, 
+        
+            }
+        
+            db.SavedItem.create(savedItem).then(function(data){
+        
+                User.findOneAndUpdate({ googleId: userId}, { $push: { savedItem: data._id } }, { new: true }).then(function(doc){
+        
+                    User.findOne({googleId: userId}).populate("savedItem").then(function(data){
+        
+                        res.json(data.savedItem);
+                        
+                    })
+        
+                })
+        
+            }).catch(err => console.log(err));
 
-        title: title,
-        link: link,
-        categories: categories,
-        description: description,
-        meta_tag_link: "",
-        time_stamp: Date.now(),
-        like: 0,
-        dislike: 0, 
 
-    }
+    })
 
-    db.SavedItem.create(savedItem).then(function(data){
 
-        User.findOneAndUpdate({ googleId: userId}, { $push: { savedItem: data._id } }, { new: true }).then(function(doc){
-
-            User.findOne({googleId: userId}).populate("savedItem").then(function(data){
-
-                res.json(data.savedItem);
-                
-            })
-
-        })
-
-    }).catch(err => console.log(err));
 
 });
 
@@ -107,7 +127,7 @@ router.delete("/api/remove_entity/:id", function(req, res){
     
 })
 
-//this route increment add of a particular bookmark referenced by id and userId
+//this route increment like of a particular bookmark referenced by id and userId
 router.post("/api/like/:id", function(req, res){
 
     console.log(req.params.id.split("&"));
@@ -129,7 +149,7 @@ router.post("/api/like/:id", function(req, res){
 
 })
 
-//this route increment dislike by 1
+//this route increment dislike of a particular bookmark referenced by id and userId
 router.post("/api/dislike/:id", function(req, res){
     
     //console.log(req.params.id.split("&"));
