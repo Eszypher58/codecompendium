@@ -132,7 +132,7 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/express"}>
+     {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src="" alt="" />
@@ -150,7 +150,7 @@ const CollectionList = (props) => {
               </div>
             </div>
         </div>
-      </a>
+      </a>*/}
 
         
     </div>

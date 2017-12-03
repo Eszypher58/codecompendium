@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactIMG from ".././assets/react.png";
 import JavascriptIMG from ".././assets/javascript.png";
 import NodejsIMG from ".././assets/nodejs.png";
-import ExpressjsIMG from ".././assets/express.png";
 import Add from ".././assets/add.png";
 
 const BookmarkList = (props) => {
@@ -27,9 +26,9 @@ const BookmarkList = (props) => {
       catImg = NodejsIMG;
       break;
 
-    case "EXPRESS":
-      catImg = ExpressjsIMG;
-      break;
+    // case "EXPRESS":
+    //   catImg = ExpressjsIMG;
+    //   break;
 
   }
 
@@ -38,8 +37,7 @@ const BookmarkList = (props) => {
 
   return (
     <div>
-      {/*<h3 className="title">{props.category}</h3>*/}
-      <h3 className="title">React</h3>
+      <h3 className="title">{props.category}</h3>
 
       <a href="#" onClick={props.onClick}>
         <div className="card add-card">
