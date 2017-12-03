@@ -210,7 +210,7 @@ ul ul a:hover {
 }
 
 .card > .img-container {
-  height: 50%;
+  height: 150px;
   overflow: hidden;
   text-align: center;
   background: #e6e6e6;
