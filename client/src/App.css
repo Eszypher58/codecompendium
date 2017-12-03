@@ -1,8 +1,8 @@
-@import "https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i";
+@import "https://fonts.googleapis.com/css?family=Allerta+Stencil|Open+Sans:300,400,600,700,800";
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #fff;
+  background: #FBFBFB;
 }
 
 a, a:hover, a:focus {
@@ -27,9 +27,9 @@ a, a:hover, a:focus {
 }
 
 #logo {
-  font-family: 'Lobster', cursive;
-  margin-top: -5px;
-  color: #FD5879;
+  font-family: 'Allerta Stencil', sans-serif;
+  color: #fff;
+  font-size: 20px
 }
 
 
@@ -74,8 +74,7 @@ a, a:hover, a:focus {
 #sidebar {
   min-width: 280px;
   max-width: 280px;
-  background: #f6f6f6;
-  color: #1c1c1c;
+  background: #333;
   transition: all 0.3s;
   border-right: 1px solid #f0f0f0;
 }
@@ -86,7 +85,7 @@ a, a:hover, a:focus {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #f6f6f6;
+  background: #333;
 }
 
 #sidebar ul.components {
@@ -102,7 +101,7 @@ a, a:hover, a:focus {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 14px;
-  color: #767676;
+  color: #c0c0c0;
   display: block;
 }
 
@@ -124,20 +123,29 @@ a[aria-expanded="true"]::before {
 
 ul ul a {
   font-size: 15px !important;
-  color: #2b2b2b !important;
+  color: #fff !important;
 }
 
 ul ul a:hover {
   color: #fff !important;
-  background: #FD5879;
+  background: #1769ff;
 }
 
 #github {
-  color: #2b2b2b !important;
+  color: #fff !important;
 }
 
 #github:hover {
-  color: #FD5879 !important;
+  color: #1769ff !important;
+}
+
+#logout {
+  color: #fff !important;
+  margin-bottom: -20px;
+}
+
+#logout:hover {
+  color: #1769ff !important;
 }
 
 
@@ -155,19 +163,37 @@ ul ul a:hover {
     Bookmark List
 ----------------------------------------------------- */
 .title {
-  font-size: 26px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   margin-top: 40px;
-  color: #767676;
+  color: #333;
+  text-transform: capitalize;
 }
 
-.add-new-icon {
-  font-size: 60px;
-  color: #f7f7f7;
-  margin-top: 40px;
+.add-card {
+ background: #fff;
+ overflow: hidden;
+}
+
+.add-icon {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: -3px;
+}
+
+.add-btn {
+  display: block;
+  width:180px;
+  margin: 45px auto;
+  background: #333;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
 }
 
 .card {
@@ -180,88 +206,117 @@ ul ul a:hover {
   margin-left: 20px;
   margin-bottom: 20px;
   float: left;
+  background: #fff;
 }
 
 .card > .img-container {
-  height: 53%;
+  height: 50%;
   overflow: hidden;
   text-align: center;
-  background:#e8e8e8;
+  background: #e6e6e6;
 }
 
 .card > .img-container > img{
   width: 290px;
 }
 
-.card > .content > a{
+.card > .card-body > a{
   display: inline-block;
   padding: 10px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
+  color: #333;
 }
 
-.card:hover .edit-btn {display: block}
+.card > .card-body > a:hover{
+  color: #1769ff;
+}
 
-.edit-btn {
+.card > .card-body > p{
+  display: block;
+  font-size: 14px;
+  margin-left: 10px;
+  max-width: 260px;
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card:hover .deleteButton {display: block}
+
+.deleteButton {
   display: none;
   position: absolute;
   right: 10px;
   top:10px;
-  background-color: #FD5879;
+  background-color: #1769ff;
   padding: 5px 10px;
   color: #fff;
   border-radius: 3px;
 }
 
-.edit-btn:hover {
+.deleteButton:hover {
   color: #fff;
-  background-color: #ef516e;
+  background-color: #1769ff;
 }
 
-.edit-btn:visited {
+.deleteButton:visited {
   color: #fff;
 }
 
-.card > .content > .user {
+.card > .card-body > .user {
   position: absolute;
   left: 10px;
   bottom: 15px;
   color: #767676;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 
-.card > .content > .like {
+.card > .card-body > .like {
   position: absolute;
-  right: 15px;
+  right: 60px;
+  bottom: 15px;
+  color: #1769ff;
+  font-size: 15px;
+}
+
+.like-icon{
+  color: #1769ff;
+}
+
+.card > .card-body > .dislike {
+  position: absolute;
+  right: 20px;
   bottom: 15px;
   color: #767676;
-  font-size: 13px;
-} 
-
-.like-icon:hover {
-  color: #FD5879;
-} 
-
-.like-icon:visited {
-  color: #FD5879;
+  font-size: 15px;
 }
+
+.dislike-icon {
+  color: #767676;
+}
+
 
 /* ---------------------------------------------------
     Collection List
 ----------------------------------------------------- */
 .collection-card {
-  height: 200px;
+  height: 250px;
 }
 
 .collection-card > .collection-img {
-  height: 70%;
+  height: 160px;
 }
 
-.card > .content > .file {
+.card > .card-body > .file {
   position: absolute;
   right: 10px;
-  bottom: 28px;
+  bottom: 16px;
   color: #767676;
   font-size: 13px;
 }

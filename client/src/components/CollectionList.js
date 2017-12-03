@@ -1,82 +1,117 @@
 import React, { Component } from "react";
-import ReactIMG from ".././assets/react.png";
-import JavascriptIMG from ".././assets/javascript.png";
-import NodejsIMG from ".././assets/nodejs.png";
-import ExpressjsIMG from ".././assets/express.png";
+import ReactCol from ".././assets/col-react.png";
+import JSCol from ".././assets/col-js.png";
+import NodeCol from ".././assets/col-node.png";
+import HTMLCol from ".././assets/col-html.png";
+
 
 const CollectionList = (props) => {
   return (
     <div>
-      <h3 className="title">{props.title}'s Collection</h3>
+      <h3 className="title">{props.title}</h3>
 
-        <div>
-          <a href="#">
-            <div className="card collection-card">
-              <div className="img-container collection-img">
-                <i class="fa fa-plus-circle add-new-icon" aria-hidden="true"></i>
+      <a href={"/"+ props.userId + "/mybookmark/react"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src={ReactCol} alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/react"}>React</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
               </div>
-              <div className="content">
-                <a href="#">Add Collection</a>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
               </div>
             </div>
-         </a>
         </div>
-            
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/javascript"}>
         <div className="card collection-card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
-          <div className="img-container collection-img">
-            <img src={ReactIMG} alt="" />
-          </div>
-
-          <div className="content">
-            <a href={"/"+ props.userId + "/mybookmark/react"}>React</a>
-            <div className="file">
-              <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+            <div className="img-container collection-img">
+              <img src={JSCol} alt="" />
             </div>
-          </div>
-        </div>
 
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/javascript"}>JavaScript</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/node"}>
         <div className="card collection-card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
-          <div className="img-container collection-img">
-            <img src={JavascriptIMG} alt="" />
-          </div>
-
-          <div className="content">
-            <a href={"/"+ props.userId + "/mybookmark/javascript"}>JavaScript</a>
-            <div className="file">
-              <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>23</span> files
+            <div className="img-container collection-img">
+              <img src={NodeCol} alt="" />
             </div>
-          </div>
-        </div>
 
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/node"}>Node JS</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+       <a href="#">
         <div className="card collection-card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
-          <div className="img-container collection-img">
-            <img src={NodejsIMG} alt="" />
-          </div>
-
-          <div className="content">
-            <a href={"/"+ props.userId + "/mybookmark/node"}>Node.js</a>
-            <div className="file">
-              <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>2</span> files
+            <div className="img-container collection-img">
+              <img src={HTMLCol} alt="" />
             </div>
-          </div>
-        </div>
 
+            <div className="card-body">
+              <a href="#">HTML</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+
+
+      <a href={"/"+ props.userId + "/mybookmark/express"}>
         <div className="card collection-card">
-          <a href="#" className="edit-btn"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
-          <div className="img-container collection-img">
-            <img src={ExpressjsIMG} alt="" />
-          </div>
-
-          <div className="content">
-            <a href={"/"+ props.userId + "/mybookmark/express"}>Express.js</a>
-            <div className="file">
-              <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>8</span> files
+            <div className="img-container collection-img">
+              <img src="" alt="" />
             </div>
-          </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/express"}>Express JS</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
         </div>
+      </a>
+
         
     </div>
   );

@@ -3,7 +3,7 @@ import ReactIMG from ".././assets/react.png";
 import JavascriptIMG from ".././assets/javascript.png";
 import NodejsIMG from ".././assets/nodejs.png";
 import ExpressjsIMG from ".././assets/express.png";
-
+import Add from ".././assets/add.png";
 
 const BookmarkList = (props) => {
 
@@ -33,68 +33,66 @@ const BookmarkList = (props) => {
 
   }
 
-
+  
   const bookmarkedItem = props.bookmarks;
 
   return (
     <div>
+      {/*<h3 className="title">{props.category}</h3>*/}
+      <h3 className="title">React</h3>
 
-      <h3 className="title">{props.category}</h3>
-
-
-
-
-        <div>
-        <a href="#" onClick={props.onClick}>
-            <div className="card">
-              <div className="img-container">
-                <i className="fa fa-plus-circle add-new-icon" aria-hidden="true"></i>
-              </div>
-              <div className="content">
-                <a href="#">Add bookmark</a>
-              </div>
-            </div>
-            </a>
+      <a href="#" onClick={props.onClick}>
+        <div className="card add-card">
+          <img className="add-icon" src={Add} />
+          <button className="add-btn">Add bookmark</button>
         </div>
+      </a>
+        
 
-        {bookmarkedItem.length ? 
+    {bookmarkedItem.length ? 
                           
-          (bookmarkedItem.map(item => {
+      (bookmarkedItem.map(item => {
 
-            console.log("This is item passed to map:", item);
+      console.log("This is item passed to map:", item);
 
-            const {title, meta_tag_link, link, date, description, categories, like, dislike, _id} = item;
+      const {title, meta_tag_link, link, date, description, categories, like, dislike, _id} = item;
 
-            if (categories.toUpperCase() === props.category){
+      if (categories.toUpperCase() === props.category){
 
-              return (
-                <div className="card">
-                <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
-                <div className="img-container">
-                  <img src={meta_tag_link || catImg} alt={categories} />
-                </div>
+      return (
+        <a href={link} target="_blank">
+        <div className="card">
+
+          <a href="#" className="deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
+
+          <div className="img-container">
+            <img className="img-responsive" src={meta_tag_link || catImg} alt={categories} />
+          </div>
       
-                <div className="content">
-                  <a href={link} target="_blank">{title}</a>
+          <div className="card-body">
+            <a className="card-title" href={link} target="_blank">{title}</a>
+            <p className="card-text truncate">{description}</p>
+      
+            <div className="user">
+              <a href="#"><span>{props.name}</span></a>
+            </div>
+      
+            <div className="like">
+              <a href="#"><i className="fa fa-thumbs-o-up like-icon" aria-hidden="true" onClick={props.onClickLike} id={_id + "&" + props.userId}></i></a> <span>{like}</span>
+            </div>
 
-                  <p>{description}</p>
-      
-                  <div className="user">
-                    <a href="#"><span>{props.name}</span></a>
-                  </div>
-      
-                  <div className="like">
-                    <a href="#"><i className="fa fa-heart like-icon" aria-hidden="true" onClick={props.onClickLike} id={_id + "&" + props.userId}></i></a> <span>{like}</span> likes
-                  </div>
-      
-                </div>
-              </div>
-              )
+            <div className="dislike">
+              <a href="#"><i className="fa fa-thumbs-o-down dislike-icon" aria-hidden="true"></i></a> <span>{dislike}</span>
+            </div>
+          </div>
+        </div>
+        </a>
+      )
 
-        }})) : (<h3></h3>) }
+    }})) : (<h3></h3>) }
 
             
-        <div className="card">
+        {/*<div className="card">
           <a href="#" className="edit-btn"><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
           <div className="img-container">
             <img src="http://blog.teamtreehouse.com/wp-content/uploads/2014/05/codingconfidence.jpg" alt="Mountain View" />
@@ -192,9 +190,7 @@ const BookmarkList = (props) => {
             </div>
 
           </div>
-        </div>
-
-   
+        </div>*/}
     </div>
   );
 }
