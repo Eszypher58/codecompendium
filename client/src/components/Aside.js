@@ -7,7 +7,7 @@ const Aside = (props) => {
   return ( 
     <nav id="sidebar">
       <div className="sidebar-header">
-        <h3 id="logo">Codependium</h3>
+        <h4 id="logo">Codependium</h4>
       </div>
 
       <ul className="list-unstyled components">
@@ -18,8 +18,8 @@ const Aside = (props) => {
               <li><a href={"/"+ props.userId + "/mycollection"} ><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/react"}><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/javascript"}><i className="fa fa-folder-o" aria-hidden="false"></i> JavaScript</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node.js</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/express"}><i className="fa fa-folder-o" aria-hidden="false"></i> Express.js</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node JS</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/express"}><i className="fa fa-folder-o" aria-hidden="false"></i> Express JS</a></li>
             </ul>
         </li>
 
@@ -31,23 +31,27 @@ const Aside = (props) => {
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> CSS</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> JavaScript</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> jQuery</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Bootstrap</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Material UI</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Node.js</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Express.js</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> MySQL</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> MongoDB</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> AJAX</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> API</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> AngularJS</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> React</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> MISC</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Node JS</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Databases</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> NPM Packages</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> APIs</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Angular</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Ruby on Rails</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Frameworks</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Misc.</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Design</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> C++</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Python</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Jobs</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Humor</a></li>
             </ul>
         </li>
       
       </ul>
-
+      <ul className="list-unstyled">
+        <li><a href="#" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+      </ul>
       <ul className="list-unstyled CTAs">
         <li><a href="https://github.com/Eszypher58/codecompendium" target="_blank" id="github"><i class="fa fa-github" aria-hidden="true"></i> Github Repo</a></li>
       </ul>
