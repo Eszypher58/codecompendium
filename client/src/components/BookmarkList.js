@@ -57,6 +57,7 @@ const BookmarkList = (props) => {
             </a>
         </div>
 
+
         {bookmarkedItem.length ? 
                           
           (bookmarkedItem.map(item => {
