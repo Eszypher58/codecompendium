@@ -1,10 +1,38 @@
 import React, { Component } from "react";
-
+import ReactIMG from ".././assets/react.png";
+import JavascriptIMG from ".././assets/javascript.png";
+import NodejsIMG from ".././assets/nodejs.png";
+import ExpressjsIMG from ".././assets/express.png";
 
 
 const BookmarkList = (props) => {
 
   console.log("this is the passed prop from mybookmark:", props);
+
+  //const collectionCategories = {REACT:ReactIMG, JAVASCRIPT:JavascriptIMG, NODE:NodejsIMG, EXPRESS:ExpressjsIMG};
+
+  let catImg = "";
+
+  switch(props.category) {
+
+    case "REACT":
+      catImg = ReactIMG;
+      break;
+    
+    case "JAVASCRIPT":
+      catImg = JavascriptIMG;
+      break;
+    
+    case "NODE":
+      catImg = NodejsIMG;
+      break;
+
+    case "EXPRESS":
+      catImg = ExpressjsIMG;
+      break;
+
+  }
+
 
   const bookmarkedItem = props.bookmarks;
 
@@ -33,7 +61,9 @@ const BookmarkList = (props) => {
                           
           (bookmarkedItem.map(item => {
 
-            const {title, link, date, description, categories, like, dislike, _id} = item;
+            console.log("This is item passed to map:", item);
+
+            const {title, meta_tag_link, link, date, description, categories, like, dislike, _id} = item;
 
             if (categories.toUpperCase() === props.category){
 
@@ -41,7 +71,7 @@ const BookmarkList = (props) => {
                 <div className="card">
                 <a href="#" className="edit-btn deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
                 <div className="img-container">
-                  <img src="/assets/javascript.png" alt={categories} />
+                  <img src={meta_tag_link || catImg} alt={categories} />
                 </div>
       
                 <div className="content">
