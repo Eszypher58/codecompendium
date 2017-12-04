@@ -1,8 +1,26 @@
 import React, { Component } from "react";
-import ReactIMG from ".././assets/react.png";
-import JavascriptIMG from ".././assets/javascript.png";
-import NodejsIMG from ".././assets/nodejs.png";
 import Add from ".././assets/add.png";
+
+// Import Default Images
+import HTMLIMG from ".././assets/html.png";
+import CSSIMG from ".././assets/css.png";
+import JavascriptIMG from ".././assets/javascript.png";
+import JqueyIMG from ".././assets/jquery.png";
+import ReactIMG from ".././assets/react.png";
+import NodejsIMG from ".././assets/nodejs.png";
+import DatabaseIMG from ".././assets/database.png";
+import NPMIMG from ".././assets/npm.png";
+import APIIMG from ".././assets/api.png";
+import AngularIMG from ".././assets/angular.png";
+import RubyIMG from ".././assets/ruby.png";
+import FrameworkIMG from ".././assets/framework.png";
+import MiscIMG from ".././assets/misc.png";
+import DesignIMG from ".././assets/design.png";
+import CplusIMG from ".././assets/c++.png";
+import PythonIMG from ".././assets/python.png";
+import JobIMG from ".././assets/jobs.png";
+import HumorIMG from ".././assets/humor.png";
+
 
 const BookmarkList = (props) => {
 
@@ -14,22 +32,77 @@ const BookmarkList = (props) => {
 
   switch(props.category) {
 
-    case "REACT":
-      catImg = ReactIMG;
+    case "HTML":
+      catImg = HTMLIMG;
       break;
-    
+
+    case "CSS":
+      catImg = CSSIMG;
+      break;
+
     case "JAVASCRIPT":
       catImg = JavascriptIMG;
       break;
-    
+
+    case "JQUERY":
+      catImg = JqueyIMG;
+      break;
+
+    case "REACT":
+      catImg = ReactIMG;
+      break;
+
     case "NODE":
       catImg = NodejsIMG;
       break;
+    
+    case "DATABASES":
+      catImg = DatabaseIMG;
+      break;
+    
+    case "NPM":
+      catImg = NPMIMG;
+      break;
 
-    // case "EXPRESS":
-    //   catImg = ExpressjsIMG;
-    //   break;
+    case "APIs":
+      catImg = APIIMG;
+      break;
 
+    case "ANGULAR":
+      catImg = AngularIMG;
+      break;
+
+    case "RUBY":
+      catImg = RubyIMG;
+      break;
+
+    case "FRAMEWORKS":
+      catImg = FrameworkIMG;
+      break;
+
+    case "MISC":
+      catImg = MiscIMG;
+      break;
+
+    case "DESIGN":
+      catImg = DesignIMG;
+      break
+
+    case "C++":
+      catImg = CplusIMG;
+      break
+
+    case "PYTHON":
+      catImg = PythonIMG;
+      break
+
+    case "JOBS":
+      catImg = JobIMG;
+      break
+
+    case "HUMOR":
+      catImg = HumorIMG;
+      break
   }
 
   

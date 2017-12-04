@@ -11,18 +11,6 @@ const Aside = (props) => {
       </div>
 
       <ul className="list-unstyled components">
-                    
-        <li className="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true">My Collections</a>
-            <ul className="list-unstyled" id="homeSubmenu">
-              <li><a href={"/"+ props.userId + "/mycollection"} ><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/react"}><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/javascript"}><i className="fa fa-folder-o" aria-hidden="false"></i> JavaScript</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node JS</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/express"}><i className="fa fa-folder-o" aria-hidden="false"></i> Express JS</a></li>
-            </ul>
-        </li>
-
         <li>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Explore</a>
             <ul className="collapse list-unstyled" id="pageSubmenu">
@@ -47,8 +35,37 @@ const Aside = (props) => {
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Humor</a></li>
             </ul>
         </li>
+
+        <li className="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true">My Collections</a>
+            <ul className="list-unstyled" id="homeSubmenu">
+              <li><a href={"/"+ props.userId + "/mycollection"} ><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/html"}><i className="fa fa-folder-o" aria-hidden="false"></i> HTML</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/css"}><i className="fa fa-folder-o" aria-hidden="false"></i> CSS</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/javascript"}><i className="fa fa-folder-o" aria-hidden="false"></i> JavaScript</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/jquery"}><i className="fa fa-folder-o" aria-hidden="false"></i> jQuery</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/react"}><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node JS</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/databases"}><i className="fa fa-folder-o" aria-hidden="false"></i> Databases</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/npm"}><i className="fa fa-folder-o" aria-hidden="false"></i> NPM Packages</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/apis"}><i className="fa fa-folder-o" aria-hidden="false"></i> APIs</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/angular"}><i className="fa fa-folder-o" aria-hidden="false"></i> Angular</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/ruby"}><i className="fa fa-folder-o" aria-hidden="false"></i> Ruby on Rails</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/frameworks"}><i className="fa fa-folder-o" aria-hidden="false"></i> Frameworks</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/misc"}><i className="fa fa-folder-o" aria-hidden="false"></i> Misc.</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/design"}><i className="fa fa-folder-o" aria-hidden="false"></i> Design</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/c++"}><i className="fa fa-folder-o" aria-hidden="false"></i> C++</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/python"}><i className="fa fa-folder-o" aria-hidden="false"></i> Python</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/jobs"}><i className="fa fa-folder-o" aria-hidden="false"></i> Jobs</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/humor"}><i className="fa fa-folder-o" aria-hidden="false"></i> Humor</a></li>
+                
+            </ul>
+        </li>
+
+        
       
       </ul>
+
       <ul className="list-unstyled">
         <li><a href="#" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
       </ul>
