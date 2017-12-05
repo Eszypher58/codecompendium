@@ -45,8 +45,11 @@ class DeleteBookmark extends React.Component {
           <i class="fa fa-times" aria-hidden="true"></i>
         </a>
 
-        <button id={this.props.bookmarkId + "&" + this.props.userId} type="button" class="btn btn-primary" onClick={this.props.onDelete}>
-          Delete Bookmark
+        <button id={this.props.bookmarkId + "&" + this.props.userId} type="button" class="btn-delete" onClick={this.props.onDelete}>
+          Delete
+        </button>
+        <button type="button" class="btn-cancel" onClick={this.props.onClose}>
+          Cancel
         </button>
          
         </div>

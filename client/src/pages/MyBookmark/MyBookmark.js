@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import axios from "axios";
 import parseURL from "parse-url";
+import BG from "../../assets/bg.png";
 
 // Components
 import Aside from '../../components/Aside';
@@ -179,7 +180,7 @@ handleSubmitButton = (e) => {
 
   render() {
     return (
-      <div class="wrapper">
+      <div className="wrapper">
         <Aside userId={this.state.userId}/>
         
         <div id="content">
@@ -198,47 +199,51 @@ handleSubmitButton = (e) => {
             onClose={this.toggleAddBookmark}
             onAdd={this.handleSubmitButton}
             userId={this.state.userId}>
-            <h3>Add Bookmark</h3>
-            <hr />
+            <img src={BG} className="modal-bg"/>
+            <span><h4><i className="fa fa-bookmark-o modal-icon" aria-hidden="true"></i><b> Add Bookmark</b></h4></span>
+            <p>Insert a link to any web page here.</p>
+            <br />
             <form>
               <div class="form-group">
-                <label for="collection">Choose collection</label>
-                <select class="form-control" id="collection" value={this.state.categories} onChange={this.handleCategories}>
+                <label for="collection" className="form-title">Choose a collection</label>
+                <select className="form-control" id="collection" value={this.state.categories} onChange={this.handleCategories}>
                   <option>HTML</option>
                   <option>CSS</option>
                   <option>JavaScript</option>
                   <option>jQuery</option>
-                  <option>Bootstrap</option>
-                  <option>Material UI</option>
-                  <option>Node.js</option>
-                  <option>Express.js</option>
-                  <option>MySQL</option>
-                  <option>MongoDB</option>
-                  <option>AJAX</option>
-                  <option>API</option>
-                  <option>AngularJS</option>
                   <option>React</option>
-                  <option>MISC</option>
+                  <option>Node JS</option>
+                  <option>Databases</option>
+                  <option>NPM Packages</option>
+                  <option>APIs</option>
+                  <option>Angular</option>
+                  <option>Ruby on Rails</option>
+                  <option>Frameworks</option>
+                  <option>Misc</option>
+                  <option>Design</option>
+                  <option>C++</option>
+                  <option>Python</option>
+                  <option>Jobs</option>
                   <option>Humor</option>
                 </select>
               </div>
 
-              <div class="form-group">
-                <label htmlFor="link">Link</label>
-                <input type="text" class="form-control" id="link" onChange={this.handleLink}/>
+              <div className="form-group">
+                <label htmlFor="link" className="form-title">Link</label>
+                <input type="text" className="form-control" id="link" onChange={this.handleLink} placeholder="Insert link" />
               </div>
 
-              <div class="form-group">
-                <label htmlFor="title">Title</label>
-                <input type="text" class="form-control" id="title" onChange={this.handleTitle}/>
+              <div className="form-group">
+                <label htmlFor="title" className="form-title">Title</label>
+                <input type="text" className="form-control" id="title" onChange={this.handleTitle} placeholder="Enter title" />
               </div>
 
-              <div class="form-group">
-                <label htmlFor="text">Text</label>
-                <textarea class="form-control" id="text" rows="3" onChange={this.handleDescription}></textarea>
+              <div className="form-group">
+                <label htmlFor="text" className="form-title">Description</label>
+                <textarea className="form-control" id="text" rows="3" onChange={this.handleDescription} placeholder="Enter description"></textarea>
               </div>
             </form>
-            <hr />
+            <br />
           </AddBookmark>
 
           <DeleteBookmark show={this.state.isOpenDelete}
@@ -246,10 +251,11 @@ handleSubmitButton = (e) => {
             onDelete={this.handleDeleteButton}
             bookmarkId={this.state.deleteId}
             userId={this.state.userId}>
-            <h3>Are you sure?</h3>
-            <hr />
-            <p>Once you delete a bookmark, you can't undo it!</p>
-            <hr />
+            <span><h4><i className="fa fa-trash-o" aria-hidden="true"></i><b> Delete Bookmark?</b></h4></span>
+            <br />
+            <p>Once you delete the bookmark will be gone forever. Are you sure you want to proceed?</p>
+            <br />
+            <br />
           </DeleteBookmark>
 
 

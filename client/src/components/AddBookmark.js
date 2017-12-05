@@ -49,9 +49,12 @@ const AddBookmark = (props) => {
         <a onClick={props.onClose} href="#" class="btn-close">
           <i class="fa fa-times" aria-hidden="true"></i>
         </a>
-
-        <button id={props.userId} type="button" class="btn btn-primary" onClick={props.onAdd}>
-          Add
+        
+        <button id={props.userId} type="button" class="btn-add" onClick={props.onAdd}>
+          Add Bookmark
+        </button>
+        <button type="button" class="btn-cancel" onClick={props.onClose}>
+          Cancel
         </button>
          
         </div>

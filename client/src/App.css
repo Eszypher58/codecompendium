@@ -253,7 +253,7 @@ ul ul a:hover {
   position: absolute;
   right: 10px;
   top:10px;
-  background-color: #1769ff;
+  background-color: #E40046;
   padding: 5px 10px;
   color: #fff;
   border-radius: 3px;
@@ -261,7 +261,7 @@ ul ul a:hover {
 
 .deleteButton:hover {
   color: #fff;
-  background-color: #1769ff;
+  background-color: #E40046;
 }
 
 .deleteButton:visited {
@@ -362,6 +362,57 @@ ul ul a:hover {
   top: 20px;
   font-size: 20px;
   color: #333;
+}
+
+.fa-bookmark-o {
+  color: #1769ff;
+  margin-right: 5px;
+}
+
+.fa-trash-o {
+  color: #E40046;
+  margin-right: 5px;
+}
+
+.form-title {
+  color: #333;
+  font-weight: 400;
+}
+
+.btn-cancel {
+  color: #767676;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  width: 80px;
+  padding: 9px;
+  margin-right: 10px;
+  float: right;
+}
+
+.btn-add {
+  color: #fff;
+  background-color: #1769ff;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  float: right;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #E40046;
+  width: 80px;
+  padding: 10px;
+  border: none;
+  float: right;
+}
+
+.modal-bg {
+  /*display: none;*/
+  width: 100%;
+  position: absolute;
+  margin-top: -80px;
+  z-index: -100;
 }
 
 
