@@ -17,7 +17,7 @@ class Login extends Component {
                 </div>
 
                 <div class="content text-center">
-                  <a class="github-login" href="/auth/google"><i class="fa fa-github" aria-hidden="true"></i> Log in with Google</a>
+                  <a class="github-login" href="/auth/google"><i class="fa fa-google-plus" aria-hidden="true"></i> Log in with Google</a>
                   
                   {/*<a href="http://localhost:3001/auth/google">A link to google oauth via check component </a>
                   <a href="http://localhost:3001/auth/github">A link to github oauth via check component </a>*/}
