@@ -13,9 +13,9 @@ a, a:hover, a:focus {
 
 .navbar {
   border: none;
-  margin-bottom: 40px;
-  border-radius: 0;
-  background-color: #fff;
+  margin-bottom: -40px;
+  background-color: #FBFBFB;
+  margin-top: -4px;
 }
 
 .navbar-btn {
@@ -23,7 +23,9 @@ a, a:hover, a:focus {
   outline: none !important;
   border: none;
   font-size: 20px;
-  color: #FD5879;
+  color: #1769ff;
+  margin-left: 15px;
+  background-color: #FBFBFB;
 }
 
 #logo {
@@ -86,10 +88,14 @@ a, a:hover, a:focus {
 #sidebar .sidebar-header {
   padding: 20px;
   background: #333;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 #sidebar ul.components {
   padding: 10px 0;
+  height: 650px;
+  overflow: scroll;
 }
 
 #sidebar ul{
@@ -132,21 +138,25 @@ ul ul a:hover {
 }
 
 #github {
+  margin-top: -10px;
   color: #fff !important;
 }
 
 #github:hover {
-  color: #1769ff !important;
+  color: #fff !important;
+  background: #1769ff;
 }
 
 #logout {
   color: #fff !important;
-  margin-bottom: -20px;
+  margin-top: 50px;
 }
 
 #logout:hover {
-  color: #1769ff !important;
+  color: #fff !important;
+  background: #1769ff;
 }
+
 
 
 /* ---------------------------------------------------
@@ -167,7 +177,7 @@ ul ul a:hover {
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-left: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-top: 40px;
   color: #333;
   text-transform: capitalize;

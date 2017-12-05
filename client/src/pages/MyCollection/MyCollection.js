@@ -42,7 +42,7 @@ class MyCollection extends Component {
       <Aside userId={this.state.userId}/>
 
         <div id="content">
-          {/*<Header />*/}
+          <Header />
           <CollectionList
             title={this.state.userName}
             userId={this.state.userId}
