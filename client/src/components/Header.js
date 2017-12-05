@@ -10,7 +10,7 @@ const Header = (props) => {
             <i className="fa fa-bars" aria-hidden="true"></i>
           </button>
 
-          <div id="search-input">
+         {/* <div id="search-input">
             <div className="input-group col-sm-12">
                 <input type="text" className="form-control" placeholder="Search bookmark" />
                 <span className="input-group-btn">
@@ -19,10 +19,9 @@ const Header = (props) => {
                     </button>
                 </span>
             </div>
-          </div>
+          </div>*/}
 
-          <div className="login">
-          </div>
+          
         </div>
 
       </div>

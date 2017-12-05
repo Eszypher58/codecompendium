@@ -181,9 +181,11 @@ handleSubmitButton = (e) => {
   render() {
     return (
       <div className="wrapper">
+
         <Aside userId={this.state.userId}/>
         
         <div id="content">
+        <Header />
         <BookmarkList 
           bookmarks={this.state.bookmarkedItem} 
           name={this.state.userName}
