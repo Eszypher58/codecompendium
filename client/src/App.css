@@ -340,14 +340,14 @@ ul ul a:hover {
   margin-left: auto;
 }
 
-.github-login {
+.card > .card-body > .github-login {
   margin-top: 40px;
   border: 1px solid #333;
   border-radius: 2px;
   padding: 10px;
 }
 
-.github-login:hover {
+.card > .card-body > .github-login:hover {
  color: #fff;
  background: #333;
 }
