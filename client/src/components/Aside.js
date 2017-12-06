@@ -25,7 +25,7 @@ const Aside = (props) => {
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> NPM Packages</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> APIs</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Angular</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Ruby on Rails</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Ruby</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Frameworks</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Misc.</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Design</a></li>
@@ -37,7 +37,7 @@ const Aside = (props) => {
         </li>
 
         <li className="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true">My Collections</a>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">My Collections</a>
             <ul className="list-unstyled" id="homeSubmenu">
               <li><a href={"/"+ props.userId + "/mycollection"} ><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/html"}><i className="fa fa-folder-o" aria-hidden="false"></i> HTML</a></li>
@@ -50,7 +50,7 @@ const Aside = (props) => {
               <li><a href={"/"+ props.userId + "/mybookmark/npm"}><i className="fa fa-folder-o" aria-hidden="false"></i> NPM Packages</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/apis"}><i className="fa fa-folder-o" aria-hidden="false"></i> APIs</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/angular"}><i className="fa fa-folder-o" aria-hidden="false"></i> Angular</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/ruby"}><i className="fa fa-folder-o" aria-hidden="false"></i> Ruby on Rails</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/ruby"}><i className="fa fa-folder-o" aria-hidden="false"></i> Ruby</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/frameworks"}><i className="fa fa-folder-o" aria-hidden="false"></i> Frameworks</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/misc"}><i className="fa fa-folder-o" aria-hidden="false"></i> Misc.</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/design"}><i className="fa fa-folder-o" aria-hidden="false"></i> Design</a></li>
