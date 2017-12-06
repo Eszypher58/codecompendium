@@ -23,7 +23,7 @@ passport.use(new GoogleStrategy(
     {
     clientID: keys.clientID,
     clientSecret: keys.clientSecret,
-    callbackURL: "https://frozen-reef-87754.herokuapp.com/auth/google/callback",
+    callbackURL: "/auth/google/callback",
     proxy: true
   }, function(accessToken, refreshToken, profile, done) {
   
