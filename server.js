@@ -48,9 +48,9 @@ app.use("/", savedItemRoutes);
 
 
 //---
-const MONGODB_URI = process.env.MONGODB_URI || keys.mongoURI;
+//const MONGODB_URI = process.env.mongoURI || keys.mongoURI;
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(keys.mongoURI);
 //mongoose.connect("mongodb://localhost/codecompendiumDB");
 
 app.use(cookieSession({
