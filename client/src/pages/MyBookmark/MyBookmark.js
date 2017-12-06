@@ -219,7 +219,7 @@ handleSubmitButton = (e) => {
                   <option>NPM Packages</option>
                   <option>APIs</option>
                   <option>Angular</option>
-                  <option>Ruby on Rails</option>
+                  <option>Ruby</option>
                   <option>Frameworks</option>
                   <option>Misc</option>
                   <option>Design</option>

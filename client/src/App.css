@@ -115,7 +115,8 @@ a[data-toggle="collapse"] {
   position: relative;
 }
 
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+a[aria-expanded="false"]::before, 
+a[aria-expanded="true"]::before {
   content: '\e252';
   display: block;
   position: absolute;
@@ -426,6 +427,30 @@ ul ul a:hover {
   z-index: -100;
 }
 
+/* ---------------------------------------------------
+    Explore Bookmark List
+----------------------------------------------------- */
+.card:hover .saveButton {display: block}
+
+.saveButton {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top:10px;
+  background-color: #1769ff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.saveButton:hover {
+  color: #fff;
+  background-color: #1769ff;
+}
+
+.saveButton:visited {
+  color: #fff;
+}
 
 /* ---------------------------------------------------
     Media Queries
