@@ -21,7 +21,7 @@ const Aside = (props) => {
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> jQuery</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> React</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Node JS</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Databases</a></li>
+              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Database</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> NPM Packages</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> APIs</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Angular</a></li>
@@ -46,7 +46,7 @@ const Aside = (props) => {
               <li><a href={"/"+ props.userId + "/mybookmark/jquery"}><i className="fa fa-folder-o" aria-hidden="false"></i> jQuery</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/react"}><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node JS</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/databases"}><i className="fa fa-folder-o" aria-hidden="false"></i> Databases</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/databases"}><i className="fa fa-folder-o" aria-hidden="false"></i> Database</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/npm"}><i className="fa fa-folder-o" aria-hidden="false"></i> NPM Packages</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/apis"}><i className="fa fa-folder-o" aria-hidden="false"></i> APIs</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/angular"}><i className="fa fa-folder-o" aria-hidden="false"></i> Angular</a></li>
