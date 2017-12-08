@@ -261,10 +261,7 @@ const CollectionList = (props) => {
     
 
    
-
-      
-
-     {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
+      {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src="" alt="" />
