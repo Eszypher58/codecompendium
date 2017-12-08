@@ -214,12 +214,12 @@ handleSubmitButton = (e) => {
                   <option>JavaScript</option>
                   <option>jQuery</option>
                   <option>React</option>
-                  <option>Node JS</option>
+                  <option>NodeJS</option>
                   <option>Databases</option>
-                  <option>NPM Packages</option>
-                  <option>APIs</option>
+                  <option>NPM</option>
+                  <option>API</option>
                   <option>Angular</option>
-                  <option>Ruby on Rails</option>
+                  <option>Ruby</option>
                   <option>Frameworks</option>
                   <option>Misc</option>
                   <option>Design</option>

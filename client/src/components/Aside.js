@@ -45,10 +45,10 @@ const Aside = (props) => {
               <li><a href={"/"+ props.userId + "/mybookmark/javascript"}><i className="fa fa-folder-o" aria-hidden="false"></i> JavaScript</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/jquery"}><i className="fa fa-folder-o" aria-hidden="false"></i> jQuery</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/react"}><i className="fa fa-folder-o" aria-hidden="false"></i> React</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/node"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node JS</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/nodejs"}><i className="fa fa-folder-o" aria-hidden="false"></i> Node JS</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/databases"}><i className="fa fa-folder-o" aria-hidden="false"></i> Databases</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/npm"}><i className="fa fa-folder-o" aria-hidden="false"></i> NPM Packages</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/apis"}><i className="fa fa-folder-o" aria-hidden="false"></i> APIs</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/API"}><i className="fa fa-folder-o" aria-hidden="false"></i> APIs</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/angular"}><i className="fa fa-folder-o" aria-hidden="false"></i> Angular</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/ruby"}><i className="fa fa-folder-o" aria-hidden="false"></i> Ruby on Rails</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/frameworks"}><i className="fa fa-folder-o" aria-hidden="false"></i> Frameworks</a></li>
