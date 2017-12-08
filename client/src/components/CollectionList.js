@@ -58,14 +58,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/node"}>
+      <a href={"/"+ props.userId + "/mybookmark/nodejs"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={NodeCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/node"}>Node JS</a>
+              <a href={"/"+ props.userId + "/mybookmark/nodejs"}>Node JS</a>
 
               <div className="user">
                 <a href="#"><span>Chloe Chou</span></a>
@@ -86,7 +86,6 @@ const CollectionList = (props) => {
 
             <div className="card-body">
               <a href={"/"+ props.userId + "/mybookmark/npm"}>NPM Packages</a>
-
               <div className="user">
                 <a href="#"><span>Chloe Chou</span></a>
               </div>

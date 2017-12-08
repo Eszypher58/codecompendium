@@ -128,6 +128,8 @@ const BookmarkList = (props) => {
 
       const {title, meta_tag_link, link, date, description, categories, like, dislike, _id} = item;
 
+      console.log(categories.toUpperCase(), props.category);
+
       if (categories.toUpperCase() === props.category){
 
       return (
