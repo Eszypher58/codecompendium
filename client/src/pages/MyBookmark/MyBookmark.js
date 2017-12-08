@@ -129,11 +129,12 @@ class MyBookmark extends Component {
 
   handleDislike = (e) => {
 
-    axios.post().then(res => {
-      
-      console.log(e.target.id);
-      
-      let id = e.target.id;
+    
+    e.preventDefault();
+    
+        console.log(e.target.id);
+        
+        let id = e.target.id;
   
       axios.post("/api/dislike/" + id).then(res => {
   
@@ -143,8 +144,6 @@ class MyBookmark extends Component {
   
       }).catch(err => console.log(err));
       
-      
-    })
 
   }
 
@@ -193,7 +192,8 @@ handleSubmitButton = (e) => {
           category={this.state.selectedCategory} 
           onClickDelete={this.toggleDeleteBookmark}
           onClick={this.toggleAddBookmark}
-          onClickLike={this.handleLike} 
+          onClickLike={this.handleLike}
+          onClickDislike={this.handleDislike}  
           />
         </div>
 
