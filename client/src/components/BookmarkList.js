@@ -155,7 +155,7 @@ const BookmarkList = (props) => {
             </div>
 
             <div className="dislike">
-              <a href="#"><i className="fa fa-thumbs-o-down dislike-icon" aria-hidden="true"></i></a> <span>{dislike}</span>
+              <a href="#"><i className="fa fa-thumbs-o-down dislike-icon" aria-hidden="true" onClick={props.onClickDislike} id={_id + "&" + props.userId}></i></a> <span>{dislike}</span>
             </div>
           </div>
         </div>

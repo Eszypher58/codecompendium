@@ -152,6 +152,8 @@ router.post("/api/like/:id", function(req, res){
 //this route increment dislike of a particular bookmark referenced by id and userId
 router.post("/api/dislike/:id", function(req, res){
     
+    console.log("hit dislike route");
+
     //console.log(req.params.id.split("&"));
         
     const id=req.params.id.split("&")[0];
