@@ -52,7 +52,7 @@ const BookmarkList = (props) => {
       catImg = ReactIMG;
       break;
 
-    case "NODE":
+    case "NODEJS":
       catImg = NodejsIMG;
       break;
     
@@ -64,7 +64,7 @@ const BookmarkList = (props) => {
       catImg = NPMIMG;
       break;
 
-    case "APIs":
+    case "API":
       catImg = APIIMG;
       break;
 
