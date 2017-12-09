@@ -54,7 +54,7 @@ const Aside = (props) => {
               <li><a href={"/"+ props.userId + "/mybookmark/frameworks"}><i className="fa fa-folder-o" aria-hidden="false"></i> Frameworks</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/misc"}><i className="fa fa-folder-o" aria-hidden="false"></i> Misc.</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/design"}><i className="fa fa-folder-o" aria-hidden="false"></i> Design</a></li>
-              <li><a href={"/"+ props.userId + "/mybookmark/c++"}><i className="fa fa-folder-o" aria-hidden="false"></i> C++</a></li>
+              <li><a href={"/"+ props.userId + "/mybookmark/cpp"}><i className="fa fa-folder-o" aria-hidden="false"></i> C++</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/python"}><i className="fa fa-folder-o" aria-hidden="false"></i> Python</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/jobs"}><i className="fa fa-folder-o" aria-hidden="false"></i> Jobs</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/humor"}><i className="fa fa-folder-o" aria-hidden="false"></i> Humor</a></li>

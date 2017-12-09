@@ -29,11 +29,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/react"}>React</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.REACT}</span> files
               </div>
             </div>
         </div>
@@ -49,11 +49,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/javascript"}>JavaScript</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JAVASCRIPT}</span> files
               </div>
             </div>
         </div>
@@ -69,11 +69,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/nodejs"}>Node JS</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.NODEJS}</span> files
               </div>
             </div>
         </div>
@@ -88,11 +88,11 @@ const CollectionList = (props) => {
             <div className="card-body">
               <a href={"/"+ props.userId + "/mybookmark/npm"}>NPM Packages</a>
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.NPM}</span> files
               </div>
             </div>
         </div>
@@ -108,11 +108,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/html"}>HTML</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.HTML}</span> files
               </div>
             </div>
         </div>
@@ -128,11 +128,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/jquery"}>jQuery</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JQUERY}</span> files
               </div>
             </div>
         </div>
@@ -148,11 +148,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/design"}>Design</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.DESIGN}</span> files
               </div>
             </div>
         </div>
@@ -168,11 +168,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/css"}>CSS</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.CSS}</span> files
               </div>
             </div>
         </div>
@@ -188,11 +188,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/API"}>APIs</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.API}</span> files
               </div>
             </div>
         </div>
@@ -208,11 +208,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/database"}>Database</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.DATABASES}</span> files
               </div>
             </div>
         </div>
@@ -228,11 +228,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/angular"}>Angular</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.ANGULAR}</span> files
               </div>
             </div>
         </div>
@@ -248,11 +248,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/frameworks"}>Frameworks</a>
 
               <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
+                <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.FRAMEWORKS}</span> files
               </div>
             </div>
         </div>

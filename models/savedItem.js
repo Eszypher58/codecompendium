@@ -44,6 +44,11 @@ var SavedItemSchema = new Schema({
 
         type: Number,
 
+    },
+    userId: {
+
+        type: String,
+
     }
 });
 
