@@ -104,7 +104,8 @@ class BubbleChart extends Component {
          width = +svg.attr("width"),
          height = +svg.attr("height");
  
-     const color = d3.scaleOrdinal(d3.schemeCategory20);
+     const color = d3.scaleOrdinal()
+     .range(["#fbb217", "#e65c23", "#87c23f", "#6ac7b4", "#45c2e6"]);
  
      const bubble = d3.pack(data)
          .size([width, height])
@@ -129,7 +130,11 @@ class BubbleChart extends Component {
  
      getSelect.append("circle")
          .attr("r", function(d) { return d.r; })
-         .style("fill", function(d) { return color(d.data.title); });
+         .style("fill", function(d) { return color(d.data.title); })
+         .style("stroke", function(d) { return color(d.data.title)})
+         .style("fill-opacity", .3)
+         .style("stroke-width", 3)
+         .attr("xlink:href", d.data.url);
  
      getSelect.append("text")
          .attr("dy", ".3em")
