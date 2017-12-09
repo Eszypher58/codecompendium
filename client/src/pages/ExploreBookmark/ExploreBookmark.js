@@ -223,7 +223,7 @@ handleSubmitButton = (e) => {
                   <option>Frameworks</option>
                   <option>Misc</option>
                   <option>Design</option>
-                  <option>C++</option>
+                  <option>CPP</option>
                   <option>Python</option>
                   <option>Jobs</option>
                   <option>Humor</option>
