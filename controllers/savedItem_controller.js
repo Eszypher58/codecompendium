@@ -134,7 +134,7 @@ router.get("/api/save_entity_count/:id", function(req, res){
                         countObj.CSS += 1;
                         break;
                     case "JAVASCRIPT":
-                        countObj.JAVASCRIT += 1;
+                        countObj.JAVASCRIPT += 1;
                         break;
                     case "JQUERY":
                         countObj.JQUERY += 1;
