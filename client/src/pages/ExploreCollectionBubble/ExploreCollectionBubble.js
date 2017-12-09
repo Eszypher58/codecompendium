@@ -10,21 +10,77 @@ class BubbleChart extends Component {
            data : {
             "children": [
               { "id": 1,
-                "title": "Javascript",
+                "title": "Angular",
                 "size": 150,
               },
               { "id": 2,
-                "title": "HTML",
+                "title": "APIs",
                 "size": 30,
               },
               { "id": 3,
-                "title": "CSS",
+                "title": "C++",
                 "size": 70,
               },
               { "id": 4,
-                "title": "Jobs",
+                "title": "CSS",
                 "size": 50,
-              }
+              },
+              { "id": 5,
+                "title": "Databases",
+                "size": 150,
+              },
+              { "id": 6,
+                "title": "Design",
+                "size": 150,
+              },
+              { "id": 7,
+                "title": "Frameworks",
+                "size": 150,
+              },
+              { "id": 8,
+                "title": "HTML",
+                "size": 150,
+              },
+              { "id": 9,
+                "title": "Humor",
+                "size": 150,
+              },
+              { "id": 10,
+                "title": "Javascript",
+                "size": 150,
+              },
+              { "id": 11,
+                "title": "Jobs",
+                "size": 150,
+              },
+              { "id": 12,
+                "title": "jQuery",
+                "size": 150,
+              },
+              { "id": 13,
+                "title": "Misc.",
+                "size": 150,
+              },
+              { "id": 14,
+                "title": "NodeJS",
+                "size": 150,
+              },
+              { "id": 15,
+                "title": "NPM Packages",
+                "size": 150,
+              },
+              { "id": 16,
+                "title": "Python",
+                "size": 150,
+              },
+              { "id": 17,
+                "title": "React",
+                "size": 150,
+              },
+              { "id": 18,
+                "title": "Ruby",
+                "size": 150,
+              },
             ]
           }
     };
@@ -77,9 +133,8 @@ class BubbleChart extends Component {
          .style("fill", function(d) { return color(d.data.title); })
          .style("stroke", function(d) { return color(d.data.title)})
          .style("fill-opacity", .3)
-         .style("stroke-width", 3)
-         .attr("xlink:href", d.data.url);
- 
+         .style("stroke-width", 3);
+          
      getSelect.append("text")
          .attr("dy", ".3em")
          .attr("font-size","20px")
@@ -93,7 +148,7 @@ class BubbleChart extends Component {
  render(){
      return(
          <div>
-             <svg ref={node => this.node = node} width={500} height={500}>
+             <svg ref={node => this.node = node} width={1000} height={1000}>
              </svg>
  
          </div>
