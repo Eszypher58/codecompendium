@@ -11,6 +11,7 @@ import NPMCol from ".././assets/col-npm.png";
 import APICol from ".././assets/col-api.png";
 import DesignCol from ".././assets/col-design.png";
 import AngularCol from ".././assets/col-angular.png";
+import RubyCol from ".././assets/col-ruby.png";
 
 
 const CollectionList = (props) => {
@@ -104,7 +105,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href="#">HTML</a>
+              <a href={"/"+ props.userId + "/mybookmark/html"}>HTML</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -124,7 +125,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/node"}>jQuery</a>
+              <a href={"/"+ props.userId + "/mybookmark/jquery"}>jQuery</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -184,7 +185,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/api"}>APIs</a>
+              <a href={"/"+ props.userId + "/mybookmark/API"}>APIs</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -204,7 +205,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/databaseCol"}>Database</a>
+              <a href={"/"+ props.userId + "/mybookmark/database"}>Database</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -244,7 +245,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/node"}>Frameworks</a>
+              <a href={"/"+ props.userId + "/mybookmark/frameworks"}>Frameworks</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -257,13 +258,130 @@ const CollectionList = (props) => {
         </div>
       </a>
 
+      <a href={"/"+ props.userId + "/mybookmark/ruby"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src={RubyCol} alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/ruby"}>Ruby</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/misc"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src="" alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/misc"}>Misc.</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/c++"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src="" alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/c++"}>C++</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/python"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src="" alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/python"}>Python</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/jobs"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src="" alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/jobs"}>Jobs</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
+      <a href={"/"+ props.userId + "/mybookmark/humor"}>
+        <div className="card collection-card">
+            <div className="img-container collection-img">
+              <img src="" alt="" />
+            </div>
+
+            <div className="card-body">
+              <a href={"/"+ props.userId + "/mybookmark/humor"}>Humor</a>
+
+              <div className="user">
+                <a href="#"><span>Chloe Chou</span></a>
+              </div>
+
+              <div className="file">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
+              </div>
+            </div>
+        </div>
+      </a>
+
     
 
    
-
-      
-
-     {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
+      {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src="" alt="" />
