@@ -177,7 +177,7 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/api"}>
+      <a href={"/"+ props.userId + "/mybookmark/API"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={APICol} alt="" />
