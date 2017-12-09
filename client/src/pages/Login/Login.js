@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../.././assets/clogo.jpg";
+import Logo from "../.././assets/logo.png";
 
 class Login extends Component {
   render() {
@@ -16,8 +16,8 @@ class Login extends Component {
                   <p class="login-welcome">Bookmarking made for developers</p>
                 </div>
 
-                <div class="content text-center">
-                  <a class="github-login" href="/auth/google"><i class="fa fa-github" aria-hidden="true"></i> Log in with Google</a>
+                <div class="card-body text-center">
+                  <a class="github-login" href="/auth/google">Log in with Google</a>
                   
                   {/*<a href="http://localhost:3001/auth/google">A link to google oauth via check component </a>
                   <a href="http://localhost:3001/auth/github">A link to github oauth via check component </a>*/}

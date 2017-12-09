@@ -1,8 +1,8 @@
-@import "https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i";
+@import "https://fonts.googleapis.com/css?family=Allerta+Stencil|Open+Sans:300,400,600,700,800";
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #fff;
+  background: #FBFBFB;
 }
 
 a, a:hover, a:focus {
@@ -13,9 +13,9 @@ a, a:hover, a:focus {
 
 .navbar {
   border: none;
-  margin-bottom: 40px;
-  border-radius: 0;
-  background-color: #fff;
+  margin-bottom: -40px;
+  background-color: #FBFBFB;
+  margin-top: -4px;
 }
 
 .navbar-btn {
@@ -23,13 +23,15 @@ a, a:hover, a:focus {
   outline: none !important;
   border: none;
   font-size: 20px;
-  color: #FD5879;
+  color: #1769ff;
+  margin-left: 15px;
+  background-color: #FBFBFB;
 }
 
 #logo {
-  font-family: 'Lobster', cursive;
-  margin-top: -5px;
-  color: #FD5879;
+  font-family: 'Allerta Stencil', sans-serif;
+  color: #fff;
+  font-size: 20px
 }
 
 
@@ -74,8 +76,7 @@ a, a:hover, a:focus {
 #sidebar {
   min-width: 280px;
   max-width: 280px;
-  background: #f6f6f6;
-  color: #1c1c1c;
+  background: #333;
   transition: all 0.3s;
   border-right: 1px solid #f0f0f0;
 }
@@ -86,11 +87,15 @@ a, a:hover, a:focus {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #f6f6f6;
+  background: #333;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 #sidebar ul.components {
   padding: 10px 0;
+  height: 650px;
+  overflow: scroll;
 }
 
 #sidebar ul{
@@ -102,7 +107,7 @@ a, a:hover, a:focus {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 14px;
-  color: #767676;
+  color: #c0c0c0;
   display: block;
 }
 
@@ -110,7 +115,8 @@ a[data-toggle="collapse"] {
   position: relative;
 }
 
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+a[aria-expanded="false"]::before, 
+a[aria-expanded="true"]::before {
   content: '\e252';
   display: block;
   position: absolute;
@@ -124,21 +130,34 @@ a[aria-expanded="true"]::before {
 
 ul ul a {
   font-size: 15px !important;
-  color: #2b2b2b !important;
+  color: #fff !important;
 }
 
 ul ul a:hover {
   color: #fff !important;
-  background: #FD5879;
+  background: #1769ff;
 }
 
 #github {
-  color: #2b2b2b !important;
+  margin-top: -10px;
+  color: #fff !important;
 }
 
 #github:hover {
-  color: #FD5879 !important;
+  color: #fff !important;
+  background: #1769ff;
 }
+
+#logout {
+  color: #fff !important;
+  margin-top: 50px;
+}
+
+#logout:hover {
+  color: #fff !important;
+  background: #1769ff;
+}
+
 
 
 /* ---------------------------------------------------
@@ -155,19 +174,37 @@ ul ul a:hover {
     Bookmark List
 ----------------------------------------------------- */
 .title {
-  font-size: 26px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   margin-left: 20px;
   margin-bottom: 40px;
   margin-top: 40px;
-  color: #767676;
+  color: #333;
+  text-transform: capitalize;
 }
 
-.add-new-icon {
-  font-size: 60px;
-  color: #f7f7f7;
-  margin-top: 40px;
+.add-card {
+ background: #fff;
+ overflow: hidden;
+}
+
+.add-icon {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: -3px;
+}
+
+.add-btn {
+  display: block;
+  width:180px;
+  margin: 45px auto;
+  background: #333;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
 }
 
 .card {
@@ -180,88 +217,117 @@ ul ul a:hover {
   margin-left: 20px;
   margin-bottom: 20px;
   float: left;
+  background: #fff;
 }
 
 .card > .img-container {
-  height: 53%;
+  height: 150px;
   overflow: hidden;
   text-align: center;
-  background:#e8e8e8;
+  background: #e6e6e6;
 }
 
 .card > .img-container > img{
   width: 290px;
 }
 
-.card > .content > a{
+.card > .card-body > a{
   display: inline-block;
   padding: 10px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
+  color: #333;
 }
 
-.card:hover .edit-btn {display: block}
+.card > .card-body > a:hover{
+  color: #1769ff;
+}
 
-.edit-btn {
+.card > .card-body > p{
+  display: block;
+  font-size: 14px;
+  margin-left: 10px;
+  max-width: 260px;
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card:hover .deleteButton {display: block}
+
+.deleteButton {
   display: none;
   position: absolute;
   right: 10px;
   top:10px;
-  background-color: #FD5879;
+  background-color: #E40046;
   padding: 5px 10px;
   color: #fff;
   border-radius: 3px;
 }
 
-.edit-btn:hover {
+.deleteButton:hover {
   color: #fff;
-  background-color: #ef516e;
+  background-color: #E40046;
 }
 
-.edit-btn:visited {
+.deleteButton:visited {
   color: #fff;
 }
 
-.card > .content > .user {
+.card > .card-body > .user {
   position: absolute;
   left: 10px;
   bottom: 15px;
   color: #767676;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 
-.card > .content > .like {
+.card > .card-body > .like {
   position: absolute;
-  right: 15px;
+  right: 60px;
+  bottom: 15px;
+  color: #1769ff;
+  font-size: 15px;
+}
+
+.like-icon{
+  color: #1769ff;
+}
+
+.card > .card-body > .dislike {
+  position: absolute;
+  right: 20px;
   bottom: 15px;
   color: #767676;
-  font-size: 13px;
-} 
-
-.like-icon:hover {
-  color: #FD5879;
-} 
-
-.like-icon:visited {
-  color: #FD5879;
+  font-size: 15px;
 }
+
+.dislike-icon {
+  color: #767676;
+}
+
 
 /* ---------------------------------------------------
     Collection List
 ----------------------------------------------------- */
 .collection-card {
-  height: 200px;
+  height: 250px;
 }
 
 .collection-card > .collection-img {
-  height: 70%;
+  height: 160px;
 }
 
-.card > .content > .file {
+.card > .card-body > .file {
   position: absolute;
   right: 10px;
-  bottom: 28px;
+  bottom: 16px;
   color: #767676;
   font-size: 13px;
 }
@@ -283,16 +349,18 @@ ul ul a:hover {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.github-login {
+.card > .card-body > .github-login {
   margin-top: 40px;
   border: 1px solid #333;
   border-radius: 2px;
   padding: 10px;
 }
 
-.github-login:hover {
+.card > .card-body > .github-login:hover {
  color: #fff;
  background: #333;
 }
@@ -309,7 +377,94 @@ ul ul a:hover {
   color: #333;
 }
 
+.fa-bookmark-o {
+  color: #1769ff;
+  margin-right: 5px;
+}
 
+.fa-trash-o {
+  color: #E40046;
+  margin-right: 5px;
+}
+
+.form-title {
+  color: #333;
+  font-weight: 400;
+}
+
+.btn-cancel {
+  color: #767676;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  width: 80px;
+  padding: 9px;
+  margin-right: 10px;
+  float: right;
+}
+
+.btn-add {
+  color: #fff;
+  background-color: #1769ff;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  float: right;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #E40046;
+  width: 80px;
+  padding: 10px;
+  border: none;
+  float: right;
+}
+
+.modal-bg {
+  /*display: none;*/
+  width: 100%;
+  position: absolute;
+  margin-top: -70px;
+  margin-left: -35px;
+  z-index: -100;
+}
+
+/* ---------------------------------------------------
+    Explore Bookmark List
+----------------------------------------------------- */
+.card:hover .saveButton {display: block}
+
+.saveButton {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top:10px;
+  background-color: #1769ff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.saveButton:hover {
+  color: #fff;
+  background-color: #1769ff;
+}
+
+.saveButton:visited {
+  color: #fff;
+}
+
+/* ---------------------------------------------------
+    Canvas
+----------------------------------------------------- */
+#canvas {
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
 /* ---------------------------------------------------
     Media Queries
 ----------------------------------------------------- */

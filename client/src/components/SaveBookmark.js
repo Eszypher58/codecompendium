@@ -1,9 +1,17 @@
 import React, { Component } from "react";
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const AddBookmark = (props) => {
+class SaveBookmark extends React.Component {
 
-  console.log("props passed to add bookmark:", props)
+  
+
+  render() {
+
+    console.log("props passed to deletebookmark:", this.props);
+    // Render nothing if the "show" prop is false
+    if(!this.props.show) {
+      return null;
+    }
 
     // The gray background
     const backdropStyle = {
@@ -20,54 +28,43 @@ const AddBookmark = (props) => {
     const modalStyle = {
       backgroundColor: '#fff',
       borderRadius: 5,
-      width: 600,
-      height: 550,
+      width: 400,
+      height: 250,
       margin: '0 auto',
       padding: 30,
       top: 180,
       display: 'block'
     };
-/*
-    const closeButton= {
-      left:10
-    }
-*/
 
-    console.log(props);
-
-    // Render nothing if the "show" prop is false
-    if(!props.show) {
-      return null;
-    } else {
-
-      return (
-
+    return (
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
-          {props.children}
+          {this.props.children}
         
-        <a onClick={props.onClose} href="#" class="btn-close">
+        <a onClick={this.props.onClose} href="#" class="btn-close">
           <i class="fa fa-times" aria-hidden="true"></i>
         </a>
-        
-        <button id={props.userId} type="button" class="btn-add" onClick={props.onAdd}>
-          Add Bookmark
+
+        <button id={this.props.bookmarkId + "&" + this.props.userId} type="button" class="btn-delete" onClick={this.props.onDelete}>
+          Delete
         </button>
-        <button type="button" class="btn-cancel" onClick={props.onClose}>
+        <button type="button" class="btn-cancel" onClick={this.props.onClose}>
           Cancel
         </button>
          
         </div>
       </div>
-      )
-    }
+    );
   }
+}
 
-{/*
-AddBookmark.propTypes = {
+SaveBookmark.propTypes = {
   onClose: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  bookmarkId: PropTypes.string,
+  userId: PropTypes.string,
   show: PropTypes.bool,
   children: PropTypes.node
 };
-*/}
-export default AddBookmark;
+
+export default SaveBookmark;

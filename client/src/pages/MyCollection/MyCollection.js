@@ -13,7 +13,7 @@ import CollectionList from "../../components/CollectionList";
 class MyCollection extends Component {
 
   state = {
-    categories: [],
+    categoriesCount: {},
     userName: "",
     userId: "",
 
@@ -29,9 +29,20 @@ class MyCollection extends Component {
     
           this.setState({userName: res.data});
 
-          console.log(this.state.userId, this.state.userName);
+          //console.log(this.state.userId, this.state.userName);
     
   }))
+
+    axios.get("/api/save_entity_count/" + id).then((res) => {
+
+      this.setState({categoriesCount: res.data});
+
+      console.log("returned from /api/save_entity_count", this.state.categoriesCount);
+
+
+
+    })
+
 }
 
 
@@ -42,10 +53,11 @@ class MyCollection extends Component {
       <Aside userId={this.state.userId}/>
 
         <div id="content">
-          {/*<Header />*/}
+          <Header />
           <CollectionList
-            title={this.state.userName}
+            userName={this.state.userName}
             userId={this.state.userId}
+            categoriesCount={this.state.categoriesCount}
           />
         </div>
       </div>

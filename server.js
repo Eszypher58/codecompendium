@@ -38,19 +38,19 @@ const savedItemRoutes = require("./controllers/savedItem_controller.js");
 
 //app.use("/", loginRoutes);
 //app.use("/", userRoutes);
-app.use("/", savedItemRoutes);
-
-//---
-
-
-
-
 
 
 //---
-const MONGODB_URI = process.env.MONGODB_URI || keys.mongoURI;
+
+
+
+
+
+
+//---
+//const MONGODB_URI = process.env.mongoURI || keys.mongoURI;
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(keys.mongoURI);
 //mongoose.connect("mongodb://localhost/codecompendiumDB");
 
 app.use(cookieSession({
@@ -64,19 +64,25 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoute')(app);
+app.use("/", savedItemRoutes);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
 }
 
+/*
 // Send every request to the React app
 // Define any API routes before this runs
 
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
+*/
 
 //test index.html to test backend items
 /*

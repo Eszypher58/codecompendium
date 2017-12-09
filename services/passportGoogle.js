@@ -16,18 +16,20 @@ passport.serializeUser((user, done) => {
     })
   });
   
-  const googleClientID = process.env.googleClientID || keys.googleClientID;
-  const googleClientSecret = process.env.googleClientSecret || keys.googleClientSecret;
+  //const googleClientID = process.env.googleClientID || keys.googleClientID;
+  //const googleClientSecret = process.env.googleClientSecret || keys.googleClientSecret;
 
 passport.use(new GoogleStrategy(
     {
-    clientID: googleClientID,
-    clientSecret: googleClientSecret,
+    clientID: keys.clientID,
+    clientSecret: keys.clientSecret,
     callbackURL: "/auth/google/callback",
     proxy: true
   }, function(accessToken, refreshToken, profile, done) {
   
-      //console.log(accessToken, refreshToken, profile);
+      console.log("******************");
+      console.log(accessToken, refreshToken, profile);
+      console.log("******************");
 
       //const existingUser = User.findOne({ googleId: profile.id});
 
