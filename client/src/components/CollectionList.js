@@ -268,19 +268,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/ruby"}>Ruby</a>
 
               <div className="user">
-<<<<<<< HEAD
                 <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.RUBY}</span> files
-=======
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
->>>>>>> 080e0223d06d545779ed8fdead9b6bee45ce89d4
               </div>
             </div>
         </div>
@@ -291,7 +283,6 @@ const CollectionList = (props) => {
             <div className="img-container collection-img">
               <img src="" alt="" />
             </div>
-<<<<<<< HEAD
 
             <div className="card-body">
               <a href={"/"+ props.userId + "/mybookmark/misc"}>Misc.</a>
@@ -322,38 +313,6 @@ const CollectionList = (props) => {
 
               <div className="file">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.CPP}</span> files
-=======
-
-            <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/misc"}>Misc.</a>
-
-              <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
-              </div>
-            </div>
-        </div>
-      </a>
-
-      <a href={"/"+ props.userId + "/mybookmark/c++"}>
-        <div className="card collection-card">
-            <div className="img-container collection-img">
-              <img src="" alt="" />
-            </div>
-
-            <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/c++"}>C++</a>
-
-              <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
->>>>>>> 080e0223d06d545779ed8fdead9b6bee45ce89d4
               </div>
             </div>
         </div>
@@ -369,19 +328,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/python"}>Python</a>
 
               <div className="user">
-<<<<<<< HEAD
                 <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.PYTHON}</span> files
-=======
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
->>>>>>> 080e0223d06d545779ed8fdead9b6bee45ce89d4
               </div>
             </div>
         </div>
@@ -397,19 +348,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/jobs"}>Jobs</a>
 
               <div className="user">
-<<<<<<< HEAD
                 <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JOBS}</span> files
-=======
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
->>>>>>> 080e0223d06d545779ed8fdead9b6bee45ce89d4
               </div>
             </div>
         </div>
@@ -425,19 +368,11 @@ const CollectionList = (props) => {
               <a href={"/"+ props.userId + "/mybookmark/humor"}>Humor</a>
 
               <div className="user">
-<<<<<<< HEAD
                 <a href="#"><span>{props.userName}</span></a>
               </div>
 
               <div className="file">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.HUMOR}</span> files
-=======
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
->>>>>>> 080e0223d06d545779ed8fdead9b6bee45ce89d4
               </div>
             </div>
         </div>
