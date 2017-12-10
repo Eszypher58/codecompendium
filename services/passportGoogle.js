@@ -33,6 +33,7 @@ passport.use(new GoogleStrategy(
 
       //const existingUser = User.findOne({ googleId: profile.id});
 
+      //find by id instead of findone
         User.findOne({googleId: profile.id}, function (err, data){
 
            // console.log(profile);
