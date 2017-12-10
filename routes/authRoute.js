@@ -10,14 +10,17 @@ module.exports = app => {
       res.send(req.user);
     });
   
-    app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
+    app.get('/auth/google/callback', passport.authenticate('google', {
+      successRedirect: '/user',
+      failureRedirect: '/error'
+  }), (req, res) => {
 
         console.log("***printing req.user ****");
         console.log(req.user);
         console.log("***END***");
       
-      //res.redirect('/' + req.user.googleId +'/mycollection');
-      res.redirect("/user");
+      res.redirect('/' + req.user.googleId +'/mycollection');
+      //res.redirect("/user");
     });
 
 
