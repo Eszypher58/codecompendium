@@ -63,56 +63,7 @@
         $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
       });
-
-      $("#submit").on("click", function(e){
-
-        e.preventDefault();
-        console.log("clicked submit");
-        console.log(e);
-
-        const title = $("#title").val();
-        const link = $("#link").val();
-        const categories = $("#categories").val();
-        const description = $("#description").val();
-
-        const data = {
-
-            title: title,
-            link: link,
-            categories: categories,
-            description: description,
-
-        }
-
-        console.log(data);
-
-        $.ajax({
-
-            method:"POST",
-            url:"/api/save_entity",
-            data: data,
-
-        }).done(function(err, res){
-
-            console.log(err, res);
-
-        })
-
-
     })
-
-    $(".deleteButton").on("click", function(e){
-      
-
-      e.preventDefault();
-
-      console.log($(this));
-
-      console.log("clicked delete Button");
-
-    })
-
-    });
     </script>
   </body>
 </html>
