@@ -10,10 +10,7 @@ module.exports = app => {
       res.send(req.user);
     });
   
-    app.get('/auth/google/callback', passport.authenticate('google', {
-      successRedirect: '/user',
-      failureRedirect: '/error'
-  }), (req, res) => {
+    app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
 
         console.log("***printing req.user ****");
         console.log(req.user);

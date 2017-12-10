@@ -24,11 +24,11 @@ passport.use(new GoogleStrategy(
     clientID: keys.clientID,
     clientSecret: keys.clientSecret,
     callbackURL: "/auth/google/callback",
-    proxy: true
+    //passReqToCallback   : true
   }, function(accessToken, refreshToken, profile, done) {
   
       console.log("******************");
-      console.log(accessToken, refreshToken, profile);
+      console.log(profile);
       console.log("******************");
 
       //const existingUser = User.findOne({ googleId: profile.id});
@@ -50,7 +50,7 @@ passport.use(new GoogleStrategy(
               //const user = await new User({googleId}).save();
               User.create({googleId: profile.id, displayName:profile.displayName, email:profile.emails, photo:profile.photos}).then(function(user){
       
-                
+
 
                   return done(null, user);
       
