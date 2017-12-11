@@ -20,28 +20,35 @@ class MyCollection extends Component {
   }
 
   componentDidMount(){
-    
-        const id = parseURL(window.location.href).pathname.split("/")[1]; 
-        console.log(id);
+
+        //const id = parseURL(window.location.href).pathname.split("/")[1]; 
+        
+
+        const userEntity = JSON.parse(sessionStorage.myUserEntity);
+        const id = userEntity.Id;
+        const name = userEntity.Name;
+        console.log("user id is:" + id);
+        console.log("user name is:" + name);
+        //console.log("MyUserEntity", userEntity);
+
         this.setState({userId: id});
+
+        this.setState({userName: name});
+
+        axios.post("/api/check/" + id, userEntity).then((res) => {
+
+          console.log("result of axios call to /api/check/", res);
+
+          axios.get("/api/save_entity_count/" + id).then((res) => {
+            
+                  this.setState({categoriesCount: res.data});
+            
+                  console.log("returned from /api/save_entity_count", this.state.categoriesCount);
+                })
+
+        })
     
-        axios.get("/api/name/" + id).then((res => {
-    
-          this.setState({userName: res.data});
 
-          //console.log(this.state.userId, this.state.userName);
-    
-  }))
-
-    axios.get("/api/save_entity_count/" + id).then((res) => {
-
-      this.setState({categoriesCount: res.data});
-
-      console.log("returned from /api/save_entity_count", this.state.categoriesCount);
-
-
-
-    })
 
 }
 

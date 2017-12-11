@@ -32,12 +32,12 @@ app.use(bodyParser.json());
 
 
 
-//const userRoutes = require("./controllers/user_controller.js");
+const userRoutes = require("./controllers/user_controller.js");
 const savedItemRoutes = require("./controllers/savedItem_controller.js");
 //const loginRoutes = require("./routes/githubOAuth.js");
 
 //app.use("/", loginRoutes);
-//app.use("/", userRoutes);
+
 
 
 //---
@@ -65,6 +65,7 @@ app.use(passport.session());
 
 require('./routes/authRoute')(app);
 app.use("/", savedItemRoutes);
+app.use("/", userRoutes);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
