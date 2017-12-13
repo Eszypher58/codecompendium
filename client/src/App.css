@@ -469,19 +469,6 @@ ul ul a:hover {
 /* ---------------------------------------------------
     Notification
 ----------------------------------------------------- */
-.button{  
-  width:200px;
-  height: 100px;
-  padding:10px;
-  margin:30px;
-  text-align:center;
-  font-weight:bold;
-  cursor:pointer;
-  transition:background .5s;
-  background:#03a679;
-  color:#f0f0f0;  
-}
-
 .notify{  
   position:absolute;
   top:0px;
@@ -502,7 +489,7 @@ ul ul a:hover {
   
 }
 
-.active{  
+.active-save{  
   height:50px;
 }
 

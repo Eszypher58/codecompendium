@@ -113,11 +113,11 @@
     })
 
     $("#success").on("click", function(){
-      $(".notify").toggleClass("active");
+      $(".notify").toggleClass("active-save");
       $("#notifyType").toggleClass("success");
   
       setTimeout(function(){
-        $(".notify").removeClass("active");
+        $(".notify").removeClass("active-save");
         $("#notifyType").removeClass("success");
       },2000);
       

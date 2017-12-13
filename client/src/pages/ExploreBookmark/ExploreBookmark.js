@@ -260,7 +260,7 @@ handleSubmitButton = (e) => {
             <br />
           </DeleteBookmark>*/}
 
-          <div class="notify"><span id="notifyType" class=""></span></div>
+         <div class="notify"><span id="notifyType" class=""></span></div>
 
 
       </div>
