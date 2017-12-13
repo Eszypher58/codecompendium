@@ -30,7 +30,7 @@ class MyBookmark extends Component {
 
   componentDidMount(){
 
-    const id = parseURL(window.location.href).pathname.split("/")[1]; 
+    const id = parseURL(window.location.href).pathname.split("/")[1];
     //console.log(id);
     //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
     const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
@@ -93,18 +93,18 @@ class MyBookmark extends Component {
   }
 
   handleDeleteButton = (e) => {
-    
+
     e.preventDefault();
-    
+
     console.log(e.target.id);
-    
+
     let id = e.target.id;
-    
+
     axios.delete("/api/remove_entity/" + id).then(res => {
 
         console.log("data from remove entity (delete button)", res.data);
         this.setState({bookmarkedItem:res.data, isOpenDelete: false,})
-    
+
     }).catch(err => console.log(err));
   }
 
@@ -113,7 +113,7 @@ class MyBookmark extends Component {
     e.preventDefault();
 
     console.log(e.target.id);
-    
+
     let id = e.target.id;
 
     axios.post("/api/like/" + id).then(res => {
@@ -129,28 +129,28 @@ class MyBookmark extends Component {
 
   handleDislike = (e) => {
 
-    
+
     e.preventDefault();
-    
+
         console.log(e.target.id);
-        
+
         let id = e.target.id;
-  
+
       axios.post("/api/dislike/" + id).then(res => {
-  
+
         console.log("data returned from /api/dislike/", res.data);
-  
+
         this.setState({bookmarkedItem:res.data})
-  
+
       }).catch(err => console.log(err));
-      
+
 
   }
 
 handleSubmitButton = (e) => {
-  
+
   e.preventDefault();
-  
+
   let id = e.target.id;
 
   console.log(id);
@@ -174,7 +174,7 @@ handleSubmitButton = (e) => {
     this.setState({bookmarkedItem: res.data, isOpenAdd: false,})
 
   }).catch(err => console.log(err));
-  
+
 }
 
   render() {
@@ -182,18 +182,18 @@ handleSubmitButton = (e) => {
       <div className="wrapper">
 
         <Aside userId={this.state.userId}/>
-        
+
         <div id="content">
         <Header />
-        <BookmarkList 
-          bookmarks={this.state.bookmarkedItem} 
+        <BookmarkList
+          bookmarks={this.state.bookmarkedItem}
           name={this.state.userName}
           userId={this.state.userId}
-          category={this.state.selectedCategory} 
+          category={this.state.selectedCategory}
           onClickDelete={this.toggleDeleteBookmark}
           onClick={this.toggleAddBookmark}
           onClickLike={this.handleLike}
-          onClickDislike={this.handleDislike}  
+          onClickDislike={this.handleDislike}
           />
         </div>
 
@@ -209,24 +209,24 @@ handleSubmitButton = (e) => {
               <div class="form-group">
                 <label for="collection" className="form-title">Choose a collection</label>
                 <select className="form-control" id="collection" value={this.state.categories} onChange={this.handleCategories}>
-                  <option>HTML</option>
-                  <option>CSS</option>
-                  <option>JavaScript</option>
-                  <option>jQuery</option>
-                  <option>React</option>
-                  <option>NodeJS</option>
-                  <option>Databases</option>
-                  <option>NPM</option>
-                  <option>API</option>
-                  <option>Angular</option>
-                  <option>Ruby</option>
-                  <option>Frameworks</option>
-                  <option>Misc</option>
-                  <option>Design</option>
-                  <option>CPP</option>
-                  <option>Python</option>
-                  <option>Jobs</option>
-                  <option>Humor</option>
+                  <option>html</option>
+                  <option>css</option>
+                  <option>javaScript</option>
+                  <option>jquery</option>
+                  <option>react</option>
+                  <option>nodejs</option>
+                  <option>databases</option>
+                  <option>npm</option>
+                  <option>api</option>
+                  <option>angular</option>
+                  <option>ruby</option>
+                  <option>frameworks</option>
+                  <option>misc</option>
+                  <option>design</option>
+                  <option>cpp</option>
+                  <option>python</option>
+                  <option>jobs</option>
+                  <option>humor</option>
                 </select>
               </div>
 

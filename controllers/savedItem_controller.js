@@ -23,16 +23,16 @@ router.post("/api/save_entity/:id", function(req, res){
 
         console.log(meta_res);
 
-        
+
     if (meta_res["og:image"]){
-    
+
         metaImg = meta_res["og:image"];
-    
+
     };
 
     //the data from front end is saved into this object, to be placed into mongodb
     let savedItem = {
-        
+
                 title: title,
                 link: link,
                 categories: categories,
@@ -42,21 +42,21 @@ router.post("/api/save_entity/:id", function(req, res){
                 like: 0,
                 dislike: 0,
                 userId: userId,
-        
+
             }
-        
+
             db.SavedItem.create(savedItem).then(function(data){
-        
+
                 User.findOneAndUpdate({ googleId: userId}, { $push: { savedItem: data._id } }, { new: true }).then(function(doc){
-        
+
                     User.findOne({googleId: userId}).populate("savedItem").then(function(data){
-        
+
                         res.json(data.savedItem);
-                        
+
                     })
-        
+
                 })
-        
+
             }).catch(err => console.log(err));
 
 
@@ -74,10 +74,10 @@ router.get("/api/save_entity/:id", function(req, res){
     const userId = req.params.id;
 
     User.findOne({googleId: userId}).populate("savedItem").then(function(data){
-        
+
             //console.log(data.savedItem);
             res.json(data.savedItem);
-        
+
     })
 
 })
@@ -93,7 +93,7 @@ router.get("/api/save_entity_count/:id", function(req, res){
 
 
     db.SavedItem.find({userId: userId}).then(function(data){
-        
+
             console.log("****save_entity_count***");
             console.log(data);
             console.log(("****END of save_entity_count***"));
@@ -162,7 +162,7 @@ router.get("/api/save_entity_count/:id", function(req, res){
                         break;
                     case "FRAMEWORKS":
                         countObj.FRAMEWORKS += 1;
-                        break;                       
+                        break;
                     case "MISC":
                         countObj.MISC += 1;
                         break;
@@ -174,7 +174,7 @@ router.get("/api/save_entity_count/:id", function(req, res){
                         break;
                     case "PYTHON":
                         countObj.PYTHON += 1;
-                        break;                       
+                        break;
                     case "JOBS":
                         countObj.JOBS += 1;
                         break;
@@ -189,7 +189,7 @@ router.get("/api/save_entity_count/:id", function(req, res){
             }
 
             res.json(countObj);
-        
+
     })
 
 })
@@ -202,11 +202,11 @@ router.get("/api/name/:id", function(req, res){
     const userId = req.params.id;
 
     User.findOne({googleId: userId}).then(function(data){
-        
+
             //res.render("save", {data: data});
             //console.log(data.displayName);
             res.json(data.displayName);
-        
+
     })
 
 
@@ -214,96 +214,96 @@ router.get("/api/name/:id", function(req, res){
 
 //this route remove a bookmarked item; and returns a json represented array of all remaining savedItems a user has.
 router.delete("/api/remove_entity/:id", function(req, res){
-    
+
         console.log("hit /remove_entity with delete");
-    
+
         //console.log(req.params.id.split("&"));
-        
+
         const id=req.params.id.split("&")[0];
         const userId=req.params.id.split("&")[1];
-        
+
         db.SavedItem.findByIdAndRemove(id).then(function(){
-            
+
             //User.findOneAndUpdate({googleId: userId}, { $pull: { savedItem: objId } }, { new: true }).populate("savedItem").then(function(data){
-                
+
             console.log("inside findoneand update");
 
             User.findOne({googleId: userId}).populate("savedItem").then(function(data){
-                        
+
                             //res.render("save", {data: data});
                             //console.log(data);
                 res.json(data.savedItem);
-                        
+
             })
-           
+
         }).catch(err => console.log(err));
-    
+
 })
 
 //this route increment like of a particular bookmark referenced by id and userId
 router.post("/api/like/:id", function(req, res){
 
     console.log(req.params.id.split("&"));
-    
+
     const id=req.params.id.split("&")[0];
     const userId=req.params.id.split("&")[1];
 
     db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { like: 1 } }, { new: true }).then(function(doc){
-        
+
         User.findOne({googleId: userId}).populate("savedItem").then(function(data){
-                        
+
                             //res.render("save", {data: data});
             console.log(data.savedItem);
             res.json(data.savedItem);
-                        
+
         })
-        
+
     }).catch(err => console.log(err));
 
 })
 
 //this route increment dislike of a particular bookmark referenced by id and userId
 router.post("/api/dislike/:id", function(req, res){
-    
+
     console.log("hit dislike route");
 
     //console.log(req.params.id.split("&"));
-        
+
     const id=req.params.id.split("&")[0];
     const userId=req.params.id.split("&")[1];
-    
-    
+
+
     db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { dislike: 1 } }, { new: true }).then(function(doc){
-            
+
                         //console.log(doc);
                         //res.json(doc);
-            
+
         User.findOne({googleId: userId}).populate("savedItem").then(function(data){
-                            
+
                                 //res.render("save", {data: data});
                                 //console.log(data.savedItem);
             res.json(data.savedItem);
-                            
+
         })
-            
+
     }).catch(err => console.log(err));
-    
+
 })
 
 //this route gets all the saved items in a categories
 router.get("/api/global_saved_item/:categories", function(req, res){
 
     const categories = req.params.categories;
+    console.log('dbsaved: ', req.params.categories);
 
     db.SavedItem.find({categories:categories}).then(function(dbSavedItem){
-
         //send the result as json
-        res.json(dbSavedItem);
+        res.send(dbSavedItem);
 
     })
 
 
-}) 
+})
 
 
 
