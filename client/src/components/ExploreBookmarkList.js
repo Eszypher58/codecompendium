@@ -110,6 +110,7 @@ const ExploreBookmarkList = (props) => {
 
   return (
     <div>
+    <h3 className="title">{props.category}</h3>
     {bookmarkedItem.length ? 
       
 (bookmarkedItem.map(item => {
