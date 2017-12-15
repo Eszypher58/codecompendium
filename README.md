@@ -2,14 +2,14 @@ Codependium
 
 Codependium is a social bookmarking tool for web developers. Users can login to save links to resources in various categories, including:
 
-CSS
-HTML
-JavaScript
-Job Boards
-Angular
-Ruby
-Databases
-...And More!
+-CSS
+-HTML
+-JavaScript
+-Job Boards
+-Angular
+-Ruby
+-Databases
+-...And More!
 
 Users can also visit each category to view links saved by the entire Codependium community. The site also allows bookmarks to be ranked (through up-vote and down-vote) to determine the best resources available to developers looking to expand their knowledge base.
 
