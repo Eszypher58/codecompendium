@@ -8,11 +8,11 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    
+
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -39,7 +39,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!-- <canvas id="canvas"></canvas> -->
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -56,7 +56,7 @@
     <!-- Bootstrap Js CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="./canvas.js"></script>
+    <!-- <script type="text/javascript" src="./canvas.js"></script> -->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -102,7 +102,7 @@
     })
 
     $(".deleteButton").on("click", function(e){
-      
+
 
       e.preventDefault();
 
@@ -115,17 +115,17 @@
     $("#success").on("click", function(){
       $(".notify").toggleClass("active");
       $("#notifyType").toggleClass("success");
-  
+
       setTimeout(function(){
         $(".notify").removeClass("active");
         $("#notifyType").removeClass("success");
       },2000);
-      
+
     })
 
     });
     </script>
 
-    
+
   </body>
 </html>

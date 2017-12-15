@@ -30,7 +30,7 @@ class ExploreBookmark extends Component {
 
   componentDidMount(){
 
-    const id = parseURL(window.location.href).pathname.split("/")[1]; 
+    const id = parseURL(window.location.href).pathname.split("/")[1];
     //console.log(id);
     //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
     const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
@@ -47,7 +47,7 @@ class ExploreBookmark extends Component {
 
   }))
 
-  axios.get("/api/save_entity/" + id).then((res) => {
+  axios.get("/api/global_saved_item/react" + selectedCategory).then((res) => {
 
     console.log("mybookmark => componentDidMount")
     //console.log(res);
@@ -57,63 +57,63 @@ class ExploreBookmark extends Component {
     })
   }
 
-  toggleAddBookmark = () => {
+  // toggleAddBookmark = () => {
+  //
+  //   console.log("clicked add bookmark");
+  //
+  //   this.setState({
+  //     isOpenAdd: !this.state.isOpenAdd
+  //   });
+  // }
+  //
+  // toggleDeleteBookmark = (e) => {
+  //
+  //   console.log(e.target.id);
+  //
+  //   this.setState({
+  //     isOpenDelete: !this.state.isOpenDelete,
+  //     deleteId: e.target.id,
+  //   });
+  // }
 
-    console.log("clicked add bookmark");
-
-    this.setState({
-      isOpenAdd: !this.state.isOpenAdd
-    });
-  }
-
-  toggleDeleteBookmark = (e) => {
-
-    console.log(e.target.id);
-
-    this.setState({
-      isOpenDelete: !this.state.isOpenDelete,
-      deleteId: e.target.id,
-    });
-  }
-
-  handleTitle = (e) => {
-    this.setState({title: e.target.value})
-  }
-
-  handleLink = (e) => {
-    this.setState({link: e.target.value})
-  }
-
-  handleCategories = (e) => {
-    this.setState({categories: e.target.value})
-  }
-
-  handleDescription = (e) => {
-    this.setState({description: e.target.value})
-  }
-
-  handleDeleteButton = (e) => {
-    
-    e.preventDefault();
-    
-    console.log(e.target.id);
-    
-    let id = e.target.id;
-    
-    axios.delete("/api/remove_entity/" + id).then(res => {
-
-        console.log("data from remove entity (delete button)", res.data);
-        this.setState({bookmarkedItem:res.data, isOpenDelete: false,})
-    
-    }).catch(err => console.log(err));
-  }
+  // handleTitle = (e) => {
+  //   this.setState({title: e.target.value})
+  // }
+  //
+  // handleLink = (e) => {
+  //   this.setState({link: e.target.value})
+  // }
+  //
+  // handleCategories = (e) => {
+  //   this.setState({categories: e.target.value})
+  // }
+  //
+  // handleDescription = (e) => {
+  //   this.setState({description: e.target.value})
+  // }
+  //
+  // handleDeleteButton = (e) => {
+  //
+  //   e.preventDefault();
+  //
+  //   console.log(e.target.id);
+  //
+  //   let id = e.target.id;
+  //
+  //   axios.delete("/api/remove_entity/" + id).then(res => {
+  //
+  //       console.log("data from remove entity (delete button)", res.data);
+  //       this.setState({bookmarkedItem:res.data, isOpenDelete: false,})
+  //
+  //   }).catch(err => console.log(err));
+  // }
 
   handleLike = (e) => {
 
     e.preventDefault();
 
     console.log(e.target.id);
-    
+
     let id = e.target.id;
 
     axios.post("/api/like/" + id).then(res => {
@@ -130,74 +130,74 @@ class ExploreBookmark extends Component {
   handleDislike = (e) => {
 
     axios.post().then(res => {
-      
+
       console.log(e.target.id);
-      
+
       let id = e.target.id;
-  
+
       axios.post("/api/dislike/" + id).then(res => {
-  
+
         console.log("data returned from /api/dislike/", res.data);
-  
+
         this.setState({bookmarkedItem:res.data})
-  
+
       }).catch(err => console.log(err));
-      
-      
+
+
     })
 
   }
 
-handleSubmitButton = (e) => {
-  
-  e.preventDefault();
-  
-  let id = e.target.id;
-
-  console.log(id);
-
-  const {title, link, categories, description } = this.state;
-
-  let item = {
-
-    title: title,
-    link: link,
-    categories: categories,
-    description: description,
-
-  }
-
-  console.log("item is:", item);
-
-  axios.post("/api/save_entity/" + id, {item}).then(res => {
-
-    //console.log(res.data);
-    this.setState({bookmarkedItem: res.data, isOpenAdd: false,})
-
-  }).catch(err => console.log(err));
-  
-}
+// handleSubmitButton = (e) => {
+//
+//   e.preventDefault();
+//
+//   let id = e.target.id;
+//
+//   console.log(id);
+//
+//   const {title, link, categories, description } = this.state;
+//
+//   let item = {
+//
+//     title: title,
+//     link: link,
+//     categories: categories,
+//     description: description,
+//
+//   }
+//
+//   console.log("item is:", item);
+//
+//   axios.post("/api/save_entity/" + id, {item}).then(res => {
+//
+//     //console.log(res.data);
+//     this.setState({bookmarkedItem: res.data, isOpenAdd: false,})
+//
+//   }).catch(err => console.log(err));
+//
+// }
 
   render() {
     return (
       <div className="wrapper">
 
         <Aside userId={this.state.userId}/>
-        
+
         <div id="content">
         <Header />
-        <ExploreBookmarkList 
-          bookmarks={this.state.bookmarkedItem} 
+        <ExploreBookmarkList
+          bookmarks={this.state.bookmarkedItem}
           name={this.state.userName}
           userId={this.state.userId}
-          category={this.state.selectedCategory} 
+          category={this.state.selectedCategory}
           onClickDelete={this.toggleDeleteBookmark}
           onClick={this.toggleAddBookmark}
-          onClickLike={this.handleLike} 
+          onClickLike={this.handleLike}
           />
         </div>
 
-        <AddBookmark show={this.state.isOpenAdd}
+        {/* <AddBookmark show={this.state.isOpenAdd}
             onClose={this.toggleAddBookmark}
             onAdd={this.handleSubmitButton}
             userId={this.state.userId}>
@@ -246,7 +246,7 @@ handleSubmitButton = (e) => {
               </div>
             </form>
             <br />
-          </AddBookmark>
+          </AddBookmark> */}
 
        {/*   <DeleteBookmark show={this.state.isOpenDelete}
             onClose={this.toggleDeleteBookmark}

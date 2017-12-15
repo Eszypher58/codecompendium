@@ -22,16 +22,16 @@ import JobsCol from ".././assets/col-jobs.png";
 const CollectionList = (props) => {
   return (
     <div>
-      <h3 className="title">My Collections</h3>
+      <h3 className="title">Explore Collections</h3>
 
-      <a href={"/"+ props.userId + "/mybookmark/react"}>
+      <a href={"explorebookmark/react"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={ReactCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/react"}>React</a>
+              <a href={"explorebookmark/react"}>React</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -44,14 +44,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/javascript"}>
+      <a href={"explorebookmark/javascript"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={JSCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/javascript"}>JavaScript</a>
+              <a href={"explorebookmark/javascript"}>JavaScript</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -64,14 +64,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/nodejs"}>
+      <a href={"explorebookmark/nodejs"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={NodeCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/nodejs"}>Node JS</a>
+              <a href={"explorebookmark/nodejs"}>Node JS</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -84,14 +84,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/npm"}>
+      <a href={"explorebookmark/npm"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={NPMCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/npm"}>NPM Packages</a>
+              <a href={"explorebookmark/npm"}>NPM Packages</a>
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
               </div>
@@ -103,14 +103,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/html"}>
+      <a href={"explorebookmark/html"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={HTMLCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/html"}>HTML</a>
+              <a href={"explorebookmark/html"}>HTML</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -123,14 +123,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/jquery"}>
+      <a href={"explorebookmark/jquery"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={JQueryCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/jquery"}>jQuery</a>
+              <a href={"explorebookmark/jquery"}>jQuery</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -143,14 +143,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/design"}>
+      <a href={"explorebookmark/design"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={DesignCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/design"}>Design</a>
+              <a href={"explorebookmark/design"}>Design</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -163,14 +163,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/css"}>
+      <a href={"explorebookmark/css"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={CSSCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/css"}>CSS</a>
+              <a href={"explorebookmark/css"}>CSS</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -183,14 +183,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/API"}>
+      <a href={"explorebookmark/API"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={APICol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/API"}>APIs</a>
+              <a href={"explorebookmark/API"}>APIs</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -203,14 +203,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/database"}>
+      <a href={"explorebookmark/database"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={DatabaseCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/database"}>Database</a>
+              <a href={"explorebookmark/database"}>Database</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -223,14 +223,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/angular"}>
+      <a href={"explorebookmark/angular"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={AngularCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/angular"}>Angular</a>
+              <a href={"explorebookmark/angular"}>Angular</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -243,14 +243,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/frameworks"}>
+      <a href={"explorebookmark/frameworks"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={FrameworksCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/frameworks"}>Frameworks</a>
+              <a href={"explorebookmark/frameworks"}>Frameworks</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -263,14 +263,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/ruby"}>
+      <a href={"explorebookmark/ruby"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={RubyCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/ruby"}>Ruby</a>
+              <a href={"explorebookmark/ruby"}>Ruby</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -283,14 +283,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/c++"}>
+      <a href={"explorebookmark/c++"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={CPlusCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/c++"}>C++</a>
+              <a href={"explorebookmark/c++"}>C++</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -303,14 +303,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/python"}>
+      <a href={"explorebookmark/python"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={PythonCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/python"}>Python</a>
+              <a href={"explorebookmark/python"}>Python</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -323,14 +323,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-         <a href={"/"+ props.userId + "/mybookmark/humor"}>
+         <a href={"explorebookmark/humor"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={HumorCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/humor"}>Humor</a>
+              <a href={"explorebookmark/humor"}>Humor</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -343,14 +343,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/misc"}>
+      <a href={"explorebookmark/misc"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={MiscCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/misc"}>Misc.</a>
+              <a href={"explorebookmark/misc"}>Misc.</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -363,14 +363,14 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/jobs"}>
+      <a href={"explorebookmark/jobs"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={JobsCol} alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/jobs"}>Jobs</a>
+              <a href={"explorebookmark/jobs"}>Jobs</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
@@ -388,14 +388,14 @@ const CollectionList = (props) => {
 
 
 
-      {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
+      {/* <a href={"explorebookmark/express"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src="" alt="" />
             </div>
 
             <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/express"}>Express JS</a>
+              <a href={"explorebookmark/express"}>Express JS</a>
 
               <div className="user">
                 <a href="#"><span>Chloe Chou</span></a>
