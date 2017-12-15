@@ -46,14 +46,14 @@ const AddBookmark = (props) => {
         <div className="modal" style={modalStyle}>
           {props.children}
         
-        <a onClick={props.onClose} href="#" class="btn-close">
-          <i class="fa fa-times" aria-hidden="true"></i>
+        <a onClick={props.onClose} href="#" className="btn-close">
+          <i className="fa fa-times" aria-hidden="true"></i>
         </a>
         
-        <button id={props.userId} type="button" class="btn-add" onClick={props.onAdd}>
+        <button id={props.userId} type="button" className="btn-add" onClick={props.onAdd}>
           Add Bookmark
         </button>
-        <button type="button" class="btn-cancel" onClick={props.onClose}>
+        <button type="button" className="btn-cancel" onClick={props.onClose}>
           Cancel
         </button>
          
