@@ -41,14 +41,14 @@ class SaveBookmark extends React.Component {
         <div className="modal" style={modalStyle}>
           {this.props.children}
         
-        <a onClick={this.props.onClose} href="#" class="btn-close">
-          <i class="fa fa-times" aria-hidden="true"></i>
+        <a onClick={this.props.onClose} href="#" className="btn-close">
+          <i className="fa fa-times" aria-hidden="true"></i>
         </a>
 
-        <button id={this.props.bookmarkId + "&" + this.props.userId} type="button" class="btn-delete" onClick={this.props.onDelete}>
+        <button id={this.props.bookmarkId + "&" + this.props.userId} type="button" className="btn-delete" onClick={this.props.onDelete}>
           Delete
         </button>
-        <button type="button" class="btn-cancel" onClick={this.props.onClose}>
+        <button type="button" className="btn-cancel" onClick={this.props.onClose}>
           Cancel
         </button>
          

@@ -51,7 +51,7 @@ const Aside = (props) => {
 
         <li className="active">
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">My Collections</a>
-            <ul className="list-unstyled" id="homeSubmenu">
+            <ul className="collapse list-unstyled" id="homeSubmenu">
               <li><a href={"/"+ props.userId + "/mycollection"} ><i className="fa fa-folder-o" aria-hidden="false"></i> All</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/html"}><i className="fa fa-folder-o" aria-hidden="false"></i> HTML</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/css"}><i className="fa fa-folder-o" aria-hidden="false"></i> CSS</a></li>
@@ -80,10 +80,12 @@ const Aside = (props) => {
       </ul>
 
       <ul className="list-unstyled">
-        <li><a href="#" id="logout" onClick={signOut}><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+
+      <li><a href="#" id="logout" onClick={signOut}><i className="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+
       </ul>
       <ul className="list-unstyled CTAs">
-        <li><a href="https://github.com/Eszypher58/codecompendium" target="_blank" id="github"><i class="fa fa-github" aria-hidden="true"></i> Github Repo</a></li>
+        <li><a href="https://github.com/Eszypher58/codecompendium" target="_blank" id="github"><i className="fa fa-github" aria-hidden="true"></i> Github Repo</a></li>
       </ul>
     </nav>
  );

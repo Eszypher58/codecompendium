@@ -38,7 +38,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.REACT}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.REACT}</span> files
               </div>
             </div>
         </div>
@@ -58,7 +58,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JAVASCRIPT}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JAVASCRIPT}</span> files
               </div>
             </div>
         </div>
@@ -78,7 +78,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.NODEJS}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.NODEJS}</span> files
               </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.NPM}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.NPM}</span> files
               </div>
             </div>
         </div>
@@ -117,7 +117,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.HTML}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.HTML}</span> files
               </div>
             </div>
         </div>
@@ -137,7 +137,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JQUERY}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JQUERY}</span> files
               </div>
             </div>
         </div>
@@ -157,7 +157,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.DESIGN}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.DESIGN}</span> files
               </div>
             </div>
         </div>
@@ -177,7 +177,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.CSS}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.CSS}</span> files
               </div>
             </div>
         </div>
@@ -197,7 +197,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.API}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.API}</span> files
               </div>
             </div>
         </div>
@@ -217,7 +217,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.DATABASES}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.DATABASES}</span> files
               </div>
             </div>
         </div>
@@ -237,7 +237,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.ANGULAR}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.ANGULAR}</span> files
               </div>
             </div>
         </div>
@@ -257,7 +257,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.FRAMEWORKS}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.FRAMEWORKS}</span> files
               </div>
             </div>
         </div>
@@ -277,7 +277,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.RUBY}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.RUBY}</span> files
               </div>
             </div>
         </div>
@@ -297,7 +297,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.CPP}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.CPP}</span> files
               </div>
             </div>
         </div>
@@ -317,7 +317,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.PYTHON}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.PYTHON}</span> files
               </div>
             </div>
         </div>
@@ -337,7 +337,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.HUMOR}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.HUMOR}</span> files
               </div>
             </div>
         </div>
@@ -357,7 +357,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.MISC}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.MISC}</span> files
               </div>
             </div>
         </div>
@@ -377,7 +377,7 @@ const CollectionList = (props) => {
               </div>
 
               <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JOBS}</span> files
+                <i className="fa fa-file-text-o" aria-hidden="true"></i> <span>{props.categoriesCount.JOBS}</span> files
               </div>
             </div>
         </div>
