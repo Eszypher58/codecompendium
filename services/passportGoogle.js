@@ -28,11 +28,12 @@ passport.use(new GoogleStrategy(
   }, function(accessToken, refreshToken, profile, done) {
   
       console.log("******************");
-      console.log(accessToken, refreshToken, profile);
+      console.log(profile);
       console.log("******************");
 
       //const existingUser = User.findOne({ googleId: profile.id});
 
+      //find by id instead of findone
         User.findOne({googleId: profile.id}, function (err, data){
 
            // console.log(profile);
@@ -49,6 +50,8 @@ passport.use(new GoogleStrategy(
               //const user = await new User({googleId}).save();
               User.create({googleId: profile.id, displayName:profile.displayName, email:profile.emails, photo:profile.photos}).then(function(user){
       
+
+
                   return done(null, user);
       
               })

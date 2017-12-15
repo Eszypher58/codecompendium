@@ -32,7 +32,12 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
-    <title>Codependium</title>
+    <!-- Google Sign In -->
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="700397110230-9v8i73e40bg98oh9p58c6j8rni16e808.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <title>Code Compendium</title>
   </head>
   <body>
     <noscript>
@@ -58,72 +63,15 @@
 
     <script type="text/javascript" src="./canvas.js"></script>
 
+    <script src="./googleauthlogin.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function () {
         $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
       });
-
-      $("#submit").on("click", function(e){
-
-        e.preventDefault();
-        console.log("clicked submit");
-        console.log(e);
-
-        const title = $("#title").val();
-        const link = $("#link").val();
-        const categories = $("#categories").val();
-        const description = $("#description").val();
-
-        const data = {
-
-            title: title,
-            link: link,
-            categories: categories,
-            description: description,
-
-        }
-
-        console.log(data);
-
-        $.ajax({
-
-            method:"POST",
-            url:"/api/save_entity",
-            data: data,
-
-        }).done(function(err, res){
-
-            console.log(err, res);
-
-        })
-
-
     })
 
-    $(".deleteButton").on("click", function(e){
-      
-
-      e.preventDefault();
-
-      console.log($(this));
-
-      console.log("clicked delete Button");
-
-    })
-
-    $("#success").on("click", function(){
-      $(".notify").toggleClass("active-save");
-      $("#notifyType").toggleClass("success");
-  
-      setTimeout(function(){
-        $(".notify").removeClass("active-save");
-        $("#notifyType").removeClass("success");
-      },2000);
-      
-    })
-
-    });
     </script>
 
     
