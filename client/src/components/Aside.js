@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LongLogo from ".././assets/LongLogo.png";
 
 const Aside = (props) => {
 
@@ -7,7 +8,7 @@ const Aside = (props) => {
   return ( 
     <nav id="sidebar">
       <div className="sidebar-header">
-        <h4 id="logo">Codependium</h4>
+        <img id="logo2" src={LongLogo} />
       </div>
 
       <ul className="list-unstyled components">
