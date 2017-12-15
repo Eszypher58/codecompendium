@@ -13,7 +13,7 @@ class Login extends Component {
 
                 <div class="header text-center">
                   <img id="logo" src={Logo} />
-                  <p class="login-welcome">Bookmarking made for developers</p>
+                  <p class="login-welcome">Social bookmarking for web developers</p>
                 </div>
 
                 <div class="card-body text-center">
