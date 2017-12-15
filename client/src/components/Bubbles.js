@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { makeBubbles } from "../helpers/canvas";
+import { makeBubbles } from "../helpers/canvas.js";
+
 
 class Bubbles extends React.Component {
   componentDidMount() {
