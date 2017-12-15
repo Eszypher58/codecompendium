@@ -370,6 +370,13 @@ ul ul a:hover {
  background: #333;
 }
 
+.abcRioButtonBlue{
+  margin-top: 50px !important;
+  margin: 0 auto;
+  width: 200px !important;
+  color: #fff !important;
+}
+
 
 /* ---------------------------------------------------
     Modal
