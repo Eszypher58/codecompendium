@@ -1,11 +1,26 @@
 import React, { Component } from "react";
 import LongLogo from ".././assets/LongLogo.png";
 
+
 const Aside = (props) => {
 
-  console.log(props);
+  function signOut() {
+    var auth2 = window["gapi"].auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      window.sessionStorage.clear();
+      window.location.href = "/";
+    });
+  }
 
-  return ( 
+  // function signOut() {
+  //   window.sessionStorage.clear();
+  //   window.location.href = "/";
+  //   console.log("signout ran");
+  // };
+
+
+  return (
     <nav id="sidebar">
       <div className="sidebar-header">
         <img id="logo2" src={LongLogo} />
@@ -59,16 +74,16 @@ const Aside = (props) => {
               <li><a href={"/"+ props.userId + "/mybookmark/python"}><i className="fa fa-folder-o" aria-hidden="false"></i> Python</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/jobs"}><i className="fa fa-folder-o" aria-hidden="false"></i> Jobs</a></li>
               <li><a href={"/"+ props.userId + "/mybookmark/humor"}><i className="fa fa-folder-o" aria-hidden="false"></i> Humor</a></li>
-                
+
             </ul>
         </li>
 
-        
-      
+
+
       </ul>
 
       <ul className="list-unstyled">
-        <li><a href="#" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+        <li><a href="#" id="logout" onClick={signOut}><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
       </ul>
       <ul className="list-unstyled CTAs">
         <li><a href="https://github.com/Eszypher58/codecompendium" target="_blank" id="github"><i class="fa fa-github" aria-hidden="true"></i> Github Repo</a></li>
