@@ -110,7 +110,7 @@ const BookmarkList = (props) => {
 
   return (
     <div>
-      <h3 className="title">{props.category}</h3>
+      <h3 className="title">MY {props.category}</h3>
 
       <a href="#" onClick={props.onClick}>
         <div className="card add-card">

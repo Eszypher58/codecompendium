@@ -110,7 +110,7 @@ const ExploreBookmarkList = (props) => {
 
   return (
     <div>
-    <h3 className="title">{props.category}</h3>
+    <h3 className="title">ALL {props.category}</h3>
     {bookmarkedItem.length ? 
       
 (bookmarkedItem.map(item => {
@@ -127,7 +127,7 @@ return (
 <a href={link} target="_blank">
 <div className="card">
 
-<a href="#" className="deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
+{/*<a href="#" className="deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>*/}
 
 <div className="img-container">
 <img className="img-responsive" src={meta_tag_link || catImg} alt={categories} />
