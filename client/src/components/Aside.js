@@ -3,7 +3,7 @@ import LongLogo from ".././assets/LongLogo.png";
 
 const Aside = (props) => {
 
-  console.log(props);
+  console.log("The Aside prop is:", props);
 
   return ( 
     <nav id="sidebar">

@@ -30,7 +30,7 @@ class ExploreBookmark extends Component {
 
   componentDidMount(){
 
-    const id = parseURL(window.location.href).pathname.split("/")[1];
+    //const id = parseURL(window.location.href).pathname.split("/")[1];
     //console.log(id);
     //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
     const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
@@ -38,6 +38,11 @@ class ExploreBookmark extends Component {
     //this.setState({userId: id});
     this.setState({selectedCategory: selectedCategory.toUpperCase()});
     //console.log(this.state.selectedCategory);
+
+    const id = JSON.parse(sessionStorage.myUserEntity).Id;
+    
+    console.log(id);
+    this.setState({userId: id});
 
   axios.get("/api/global_saved_item/" + selectedCategory).then((res) => {
 
