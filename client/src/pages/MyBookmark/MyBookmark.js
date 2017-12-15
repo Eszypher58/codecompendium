@@ -209,24 +209,24 @@ handleSubmitButton = (e) => {
               <div class="form-group">
                 <label for="collection" className="form-title">Choose a collection</label>
                 <select className="form-control" id="collection" value={this.state.categories} onChange={this.handleCategories}>
-                  <option>html</option>
-                  <option>css</option>
-                  <option>javaScript</option>
-                  <option>jquery</option>
-                  <option>react</option>
-                  <option>nodejs</option>
-                  <option>databases</option>
-                  <option>npm</option>
-                  <option>api</option>
-                  <option>angular</option>
-                  <option>ruby</option>
-                  <option>frameworks</option>
-                  <option>misc</option>
-                  <option>design</option>
-                  <option>cpp</option>
-                  <option>python</option>
-                  <option>jobs</option>
-                  <option>humor</option>
+                  <option>HTML</option>
+                  <option>CSS</option>
+                  <option>JAVASCRIPT</option>
+                  <option>JQUERY</option>
+                  <option>REACT</option>
+                  <option>NODEJS</option>
+                  <option>DATABASES</option>
+                  <option>NPM</option>
+                  <option>API</option>
+                  <option>ANGULAR</option>
+                  <option>RUBY</option>
+                  <option>FRAMEWORKS</option>
+                  <option>MISC</option>
+                  <option>DESIGN</option>
+                  <option>CPP</option>
+                  <option>PYTHON</option>
+                  <option>JOBS</option>
+                  <option>HUMOR</option>
                 </select>
               </div>
 

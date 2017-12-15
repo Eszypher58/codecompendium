@@ -295,10 +295,12 @@ router.post("/api/dislike/:id", function(req, res){
 //this route gets all the saved items in a categories
 router.get("/api/global_saved_item/:categories", function(req, res){
 
-    const categories = req.params.categories;
+    const categories = req.params.categories.toUpperCase();
     console.log('dbsaved: ', req.params.categories);
 
     db.SavedItem.find({categories:categories}).then(function(dbSavedItem){
+
+        console.log(dbSavedItem);
         //send the result as json
         res.send(dbSavedItem);
 

@@ -16,24 +16,24 @@ const Aside = (props) => {
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Explore</a>
             <ul className="collapse list-unstyled" id="pageSubmenu">
               <li><a href="/explorecollection"><i className="fa fa-folder-o" aria-hidden="true"></i> All</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> HTML</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> CSS</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> JavaScript</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> jQuery</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> React</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Node JS</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Database</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> NPM Packages</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> APIs</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Angular</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Ruby</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Frameworks</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Misc.</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Design</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> C++</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Python</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Jobs</a></li>
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> Humor</a></li>
+              <li><a href="/explorebookmark/html"><i className="fa fa-folder-o" aria-hidden="true"></i> HTML</a></li>
+              <li><a href="/explorebookmark/css"><i className="fa fa-folder-o" aria-hidden="true"></i> CSS</a></li>
+              <li><a href="/explorebookmark/javascript"><i className="fa fa-folder-o" aria-hidden="true"></i> JavaScript</a></li>
+              <li><a href="/explorebookmark/jquery"><i className="fa fa-folder-o" aria-hidden="true"></i> jQuery</a></li>
+              <li><a href="/explorebookmark/react"><i className="fa fa-folder-o" aria-hidden="true"></i> React</a></li>
+              <li><a href="/explorebookmark/nodejs"><i className="fa fa-folder-o" aria-hidden="true"></i> Node JS</a></li>
+              <li><a href="/explorebookmark/databases"><i className="fa fa-folder-o" aria-hidden="true"></i> Database</a></li>
+              <li><a href="/explorebookmark/npm"><i className="fa fa-folder-o" aria-hidden="true"></i> NPM Packages</a></li>
+              <li><a href="/explorebookmark/API"><i className="fa fa-folder-o" aria-hidden="true"></i> APIs</a></li>
+              <li><a href="/explorebookmark/angular"><i className="fa fa-folder-o" aria-hidden="true"></i> Angular</a></li>
+              <li><a href="/explorebookmark/ruby"><i className="fa fa-folder-o" aria-hidden="true"></i> Ruby</a></li>
+              <li><a href="/explorebookmark/frameworks"><i className="fa fa-folder-o" aria-hidden="true"></i> Frameworks</a></li>
+              <li><a href="/explorebookmark/misc"><i className="fa fa-folder-o" aria-hidden="true"></i> Misc.</a></li>
+              <li><a href="/explorebookmark/design"><i className="fa fa-folder-o" aria-hidden="true"></i> Design</a></li>
+              <li><a href="/explorebookmark/cpp"><i className="fa fa-folder-o" aria-hidden="true"></i> C++</a></li>
+              <li><a href="/explorebookmark/python"><i className="fa fa-folder-o" aria-hidden="true"></i> Python</a></li>
+              <li><a href="/explorebookmark/jobs"><i className="fa fa-folder-o" aria-hidden="true"></i> Jobs</a></li>
+              <li><a href="/explorebookmark/humor"><i className="fa fa-folder-o" aria-hidden="true"></i> Humor</a></li>
             </ul>
         </li>
 
