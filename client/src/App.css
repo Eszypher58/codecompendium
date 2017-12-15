@@ -34,6 +34,11 @@ a, a:hover, a:focus {
   font-size: 20px
 }
 
+#logo2 {
+  width: 100%;
+  padding-right:16px;
+}
+
 
 /* ---------------------------------------------------
     Search Bar
