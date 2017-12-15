@@ -458,13 +458,45 @@ ul ul a:hover {
     Canvas
 ----------------------------------------------------- */
 #canvas {
-
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
 
 }
+
+
+/* ---------------------------------------------------
+    Notification
+----------------------------------------------------- */
+.notify{  
+  position:absolute;
+  top:0px;
+  width:100%;
+  height:0;  
+  box-sizing:border-box;
+  color:white;  
+  text-align:center;
+  background:rgba(0,0,0,.6);
+  overflow:hidden;
+  box-sizing:border-box;
+  transition:height .2s;
+}
+
+#notifyType:before{
+  display:block;
+  margin-top:15px; 
+  
+}
+
+.active-save{  
+  height:50px;
+}
+
+.success:before{
+  Content:"Saved!";
+}
+
 /* ---------------------------------------------------
     Media Queries
 ----------------------------------------------------- */

@@ -115,7 +115,7 @@ const ExploreBookmarkList = (props) => {
       <a href="" target="_blank">
         <div className="card">
 
-          <a href="#" className="saveButton" onClick={props.onClickDelete}><i className="fa fa-bookmark" aria-hidden="true"></i> Save</a>
+          <a href="#" id="success" className="saveButton" onClick={props.onClickDelete}><i className="fa fa-bookmark" aria-hidden="true"></i> Save</a>
 
           <div className="img-container">
             <img className="img-responsive" src={ReactIMG} alt="" />

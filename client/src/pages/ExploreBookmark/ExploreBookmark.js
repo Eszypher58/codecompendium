@@ -248,7 +248,7 @@ handleSubmitButton = (e) => {
             <br />
           </AddBookmark>
 
-          <DeleteBookmark show={this.state.isOpenDelete}
+       {/*   <DeleteBookmark show={this.state.isOpenDelete}
             onClose={this.toggleDeleteBookmark}
             onDelete={this.handleDeleteButton}
             bookmarkId={this.state.deleteId}
@@ -258,7 +258,9 @@ handleSubmitButton = (e) => {
             <p>Once you delete the bookmark will be gone forever. Are you sure you want to proceed?</p>
             <br />
             <br />
-          </DeleteBookmark>
+          </DeleteBookmark>*/}
+
+         <div class="notify"><span id="notifyType" class=""></span></div>
 
 
       </div>

@@ -88,7 +88,7 @@ const BookmarkList = (props) => {
       catImg = DesignIMG;
       break
 
-    case "C++":
+    case "CPP":
       catImg = CplusIMG;
       break
 
