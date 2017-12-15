@@ -15,7 +15,7 @@ const Aside = (props) => {
         <li>
           <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Explore</a>
             <ul className="collapse list-unstyled" id="pageSubmenu">
-              <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> All</a></li>
+              <li><a href="/explorecollection"><i className="fa fa-folder-o" aria-hidden="true"></i> All</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> HTML</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> CSS</a></li>
               <li><a href="#"><i className="fa fa-folder-o" aria-hidden="true"></i> JavaScript</a></li>

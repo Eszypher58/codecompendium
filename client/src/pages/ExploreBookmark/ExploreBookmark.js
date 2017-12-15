@@ -35,25 +35,17 @@ class ExploreBookmark extends Component {
     //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
     const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
     console.log(id, selectedCategory);
-    this.setState({userId: id});
+    //this.setState({userId: id});
     this.setState({selectedCategory: selectedCategory.toUpperCase()});
     console.log(this.state.selectedCategory);
 
-    axios.get("/api/name/" + id).then((res => {
-
-      //console.log(res.data);
-
-      this.setState({userName: res.data});
-
-  }))
-
-  axios.get("/api/global_saved_item/react" + selectedCategory).then((res) => {
+  axios.get("/api/global_saved_item/" + selectedCategory).then((res) => {
 
     console.log("mybookmark => componentDidMount")
     //console.log(res);
 
     this.setState({bookmarkedItem: res.data});
-    //console.log(this.state.bookmarkedItem);
+    console.log(this.state.bookmarkedItem);
     })
   }
 
