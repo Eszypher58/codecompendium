@@ -21,8 +21,7 @@ class MyCollection extends Component {
 
   componentDidMount(){
 
-        //const id = parseURL(window.location.href).pathname.split("/")[1]; 
-        
+        //const id = parseURL(window.location.href).pathname.split("/")[1];
 
         const userEntity = JSON.parse(sessionStorage.myUserEntity);
         const id = userEntity.Id;
@@ -40,14 +39,14 @@ class MyCollection extends Component {
           console.log("result of axios call to /api/check/", res);
 
           axios.get("/api/save_entity_count/" + id).then((res) => {
-            
+
                   this.setState({categoriesCount: res.data});
-            
+
                   console.log("returned from /api/save_entity_count", this.state.categoriesCount);
                 })
 
         })
-    
+
 
 
 }

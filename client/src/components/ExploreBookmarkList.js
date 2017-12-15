@@ -110,35 +110,50 @@ const ExploreBookmarkList = (props) => {
 
   return (
     <div>
-      <h3 className="title">REACT</h3>
+    <h3 className="title">{props.category}</h3>
+    {bookmarkedItem.length ? 
       
-      <a href="" target="_blank">
-        <div className="card">
+(bookmarkedItem.map(item => {
 
-          <a href="#" id="success" className="saveButton" onClick={props.onClickDelete}><i className="fa fa-bookmark" aria-hidden="true"></i> Save</a>
+console.log("This is item passed to map:", item);
 
-          <div className="img-container">
-            <img className="img-responsive" src={ReactIMG} alt="" />
-          </div>
-      
-          <div className="card-body">
-            <a className="card-title" href="" target="_blank">Intro To React</a>
-            <p className="card-text truncate">react tutorial</p>
-      
-            <div className="user">
-              <a href="#"><span>Chloe Chou</span></a>
-            </div>
-      
-            <div className="like">
-              <a href="#"><i className="fa fa-thumbs-o-up like-icon" aria-hidden="true" onClick={props.onClickLike}></i></a> <span>120</span>
-            </div>
+const {title, meta_tag_link, link, date, description, categories, like, dislike, _id} = item;
 
-            <div className="dislike">
-              <a href="#"><i className="fa fa-thumbs-o-down dislike-icon" aria-hidden="true"></i></a> <span>5</span>
-            </div>
-          </div>
-        </div>
-        </a>
+console.log(categories.toUpperCase(), props.category);
+
+if (categories.toUpperCase() === props.category){
+
+return (
+<a href={link} target="_blank">
+<div className="card">
+
+<a href="#" className="deleteButton" id={_id} onClick={props.onClickDelete}><i className="fa fa-trash" aria-hidden="true"></i> Delete</a>
+
+<div className="img-container">
+<img className="img-responsive" src={meta_tag_link || catImg} alt={categories} />
+</div>
+
+<div className="card-body">
+<a className="card-title" href={link} target="_blank">{title}</a>
+<p className="card-text truncate">{description}</p>
+
+<div className="user">
+<a href="#"><span>{props.name}</span></a>
+</div>
+
+<div className="like">
+<a href="#"><i className="fa fa-thumbs-o-up like-icon" aria-hidden="true" onClick={props.onClickLike} id={_id + "&" + props.userId}></i></a> <span>{like}</span>
+</div>
+
+<div className="dislike">
+<a href="#"><i className="fa fa-thumbs-o-down dislike-icon" aria-hidden="true" onClick={props.onClickDislike} id={_id + "&" + props.userId}></i></a> <span>{dislike}</span>
+</div>
+</div>
+</div>
+</a>
+)
+
+}})) : (<h3></h3>) }
     </div>
   );
 }
