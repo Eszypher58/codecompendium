@@ -17,7 +17,7 @@ class Login extends Component {
                 </div>
 
                 <div class="card-body text-center">
-                  <a class="github-login" href="/auth/google">Log in with Google</a>
+                  {/*<a class="github-login" href="/auth/google">Log in with Google</a>*/}
 
                   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                   
