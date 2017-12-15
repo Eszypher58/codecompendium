@@ -21,7 +21,9 @@ class ExploreCollection extends Component {
 
   componentDidMount(){
     
-        const id = parseURL(window.location.href).pathname.split("/")[1]; 
+        //const id = parseURL(window.location.href).pathname.split("/")[1]; 
+        const id = JSON.parse(sessionStorage.myUserEntity).Id;
+        
         console.log(id);
         this.setState({userId: id});
     

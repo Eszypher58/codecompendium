@@ -20,7 +20,7 @@ class ExploreBookmark extends Component {
     userId: "",
     title: "",
     link: "",
-    categories: "HTML",
+    categories: "html",
     selectedCategory: "",
     description: "",
     deleteId: "",
@@ -30,30 +30,27 @@ class ExploreBookmark extends Component {
 
   componentDidMount(){
 
-    const id = parseURL(window.location.href).pathname.split("/")[1];
+    //const id = parseURL(window.location.href).pathname.split("/")[1];
     //console.log(id);
     //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
     const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
-    console.log(id, selectedCategory);
-    this.setState({userId: id});
+    //console.log(id, selectedCategory);
+    //this.setState({userId: id});
     this.setState({selectedCategory: selectedCategory.toUpperCase()});
-    console.log(this.state.selectedCategory);
+    //console.log(this.state.selectedCategory);
 
-    axios.get("/api/name/" + id).then((res => {
+    const id = JSON.parse(sessionStorage.myUserEntity).Id;
+    
+    console.log(id);
+    this.setState({userId: id});
 
-      //console.log(res.data);
+  axios.get("/api/global_saved_item/" + selectedCategory).then((res) => {
 
-      this.setState({userName: res.data});
-
-  }))
-
-  axios.get("/api/global_saved_item/react" + selectedCategory).then((res) => {
-
-    console.log("mybookmark => componentDidMount")
+    console.log("explorebookmark => componentDidMount")
     //console.log(res);
 
     this.setState({bookmarkedItem: res.data});
-    //console.log(this.state.bookmarkedItem);
+    console.log("explore bookmark:" + this.state.bookmarkedItem);
     })
   }
 

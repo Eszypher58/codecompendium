@@ -14,6 +14,7 @@ function onSignIn(googleUser) {
   //console.log("Image URL: " + googleprofile.getImageUrl());
   //console.log("Email: " + googleprofile.getEmail());
 
+
   // The ID token you need to pass to your backend:
   var id_token = googleUser.getAuthResponse().id_token;
   //console.log("ID Token: " + id_token);
@@ -46,3 +47,4 @@ function onLoad() {
     console.log('auth2 initialized');
   });
 }
+
