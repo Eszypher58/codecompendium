@@ -34,6 +34,11 @@ a, a:hover, a:focus {
   font-size: 20px
 }
 
+#logo2 {
+  width: 100%;
+  padding-right:16px;
+}
+
 
 /* ---------------------------------------------------
     Search Bar
@@ -88,8 +93,8 @@ a, a:hover, a:focus {
 #sidebar .sidebar-header {
   padding: 20px;
   background: #333;
-  margin-top: -10px;
-  margin-bottom: -10px;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }
 
 #sidebar ul.components {
@@ -365,6 +370,13 @@ ul ul a:hover {
  background: #333;
 }
 
+.abcRioButtonBlue{
+  margin-top: 50px !important;
+  margin: 0 auto;
+  width: 200px !important;
+  color: #fff !important;
+}
+
 
 /* ---------------------------------------------------
     Modal
@@ -469,19 +481,6 @@ ul ul a:hover {
 /* ---------------------------------------------------
     Notification
 ----------------------------------------------------- */
-.button{  
-  width:200px;
-  height: 100px;
-  padding:10px;
-  margin:30px;
-  text-align:center;
-  font-weight:bold;
-  cursor:pointer;
-  transition:background .5s;
-  background:#03a679;
-  color:#f0f0f0;  
-}
-
 .notify{  
   position:absolute;
   top:0px;
@@ -502,7 +501,7 @@ ul ul a:hover {
   
 }
 
-.active{  
+.active-save{  
   height:50px;
 }
 

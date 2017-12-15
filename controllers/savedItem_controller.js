@@ -94,9 +94,11 @@ router.get("/api/save_entity_count/:id", function(req, res){
 
     db.SavedItem.find({userId: userId}).then(function(data){
 
-            console.log("****save_entity_count***");
-            console.log(data);
-            console.log(("****END of save_entity_count***"));
+        
+            //console.log("****save_entity_count***");
+            //console.log(data);
+            //console.log(("****END of save_entity_count***"));
+
 
             let countObj = {
 

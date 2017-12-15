@@ -4,7 +4,7 @@ module.exports = app => {
     app.get('/auth/google', passport.authenticate('google',
       {
         scope: ['profile', 'email']
-      }), (req, res)=>{ console.log("in pp.get /auth/google") });
+      }), (req, res)=>{ console.log("in app.get /auth/google") });
   
     app.get('/user', (req, res) => {
       res.send(req.user);
@@ -17,6 +17,7 @@ module.exports = app => {
         console.log("***END***");
       
       res.redirect('/' + req.user.googleId +'/mycollection');
+      //res.redirect("/user");
     });
 
 
