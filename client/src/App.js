@@ -19,7 +19,7 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route exact path="/*/mybookmark/*" component={MyBookmark} />
           <Route exact path="/*/mycollection" component={MyCollection} />
-          <Route exact path="/explorebookmark" component={ExploreBookmark} />
+          <Route exact path="/explorebookmark/*" component={ExploreBookmark} />
           <Route exact path="/explorecollection" component={ExploreCollection} />
           {/*<Route exact path="/explorecollectionbubble" component={ExploreCollectionBubble} />*/}
         </Switch>
