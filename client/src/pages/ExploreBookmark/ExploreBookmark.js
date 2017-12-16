@@ -191,6 +191,7 @@ class ExploreBookmark extends Component {
           onClickDelete={this.toggleDeleteBookmark}
           onClick={this.toggleAddBookmark}
           onClickLike={this.handleLike}
+          onClickDislike={this.handleDislike}
           />
         </div>
 
