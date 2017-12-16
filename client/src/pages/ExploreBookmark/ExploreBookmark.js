@@ -126,11 +126,19 @@ class ExploreBookmark extends Component {
 
   handleDislike = (e) => {
 
+    console.log("handle dislike in explorebookmark gets called");
+
+    e.preventDefault();
+    
+    console.log(e.target.id);
+    
+    let id = e.target.id;
+
     axios.post().then(res => {
 
-      console.log(e.target.id);
+      //console.log(e.target.id);
 
-      let id = e.target.id;
+      //let id = e.target.id;
 
       axios.post("/api/dislike/" + id).then(res => {
 
