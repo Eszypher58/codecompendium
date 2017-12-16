@@ -12,6 +12,23 @@ import Login from "./pages/Login";
 
 
 class App extends Component {
+
+
+  onLoad = () => {
+    console.log("onload ran", gapi);
+    gapi.load('auth2', function() {
+      gapi.auth2.init();
+      console.log('auth2 initialized');
+    });
+  }
+
+  componentDidMount() {
+
+    onLoad();
+
+  }
+
+
   render() {
     return (
       <Router>
