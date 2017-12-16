@@ -319,11 +319,11 @@ router.post("/api/global_saved_item/like/:id", function(req, res){
     
         db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { like: 1 } }, { new: true }).then(function(doc){
     
-            User.findOne({}).populate("savedItem").then(function(data){
+            db.SavedItem.find({}).then(function(data){
     
                                 //res.render("save", {data: data});
-                console.log(data.savedItem);
-                res.json(data.savedItem);
+                console.log("this is saved data", data);
+                res.json(data);
     
             })
     
@@ -347,11 +347,11 @@ router.post("/api/global_saved_item/like/:id", function(req, res){
                             //console.log(doc);
                             //res.json(doc);
     
-            User.findOne({}).populate("savedItem").then(function(data){
+            db.SavedItem.find({}).then(function(data){
     
                                     //res.render("save", {data: data});
                                     //console.log(data.savedItem);
-                res.json(data.savedItem);
+                res.json(data);
     
             })
     
