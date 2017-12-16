@@ -44,6 +44,7 @@ function signOut() {
 
 
 function onLoad() {
+  console.log("onload ran", gapi);
   gapi.load('auth2', function() {
     gapi.auth2.init();
     console.log('auth2 initialized');
