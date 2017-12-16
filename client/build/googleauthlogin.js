@@ -33,7 +33,7 @@ function onSignIn(googleUser) {
   });
 };
 
-/*
+
 function signOut() {
   console.log("signOut ran");
   var auth2 = gapi.auth2.getAuthInstance();
@@ -41,7 +41,7 @@ function signOut() {
     console.log('User signed out.');
   });
 }
-*/
+
 
 function onLoad() {
   gapi.load('auth2', function() {
