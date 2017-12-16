@@ -52,7 +52,7 @@ const ExploreBookmarkList = (props) => {
       catImg = ReactIMG;
       break;
 
-    case "NODE":
+    case "NODEJS":
       catImg = NodejsIMG;
       break;
     
@@ -64,7 +64,7 @@ const ExploreBookmarkList = (props) => {
       catImg = NPMIMG;
       break;
 
-    case "APIs":
+    case "API":
       catImg = APIIMG;
       break;
 
@@ -88,7 +88,7 @@ const ExploreBookmarkList = (props) => {
       catImg = DesignIMG;
       break
 
-    case "C++":
+    case "CPP":
       catImg = CplusIMG;
       break
 
