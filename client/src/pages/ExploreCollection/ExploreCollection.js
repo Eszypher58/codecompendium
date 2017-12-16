@@ -24,7 +24,6 @@ class ExploreCollection extends Component {
         //const id = parseURL(window.location.href).pathname.split("/")[1]; 
         const id = JSON.parse(sessionStorage.myUserEntity).Id;
         
-        console.log(id);
         this.setState({userId: id});
     
         axios.get("/api/name/" + id).then((res => {

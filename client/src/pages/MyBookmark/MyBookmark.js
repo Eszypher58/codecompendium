@@ -31,17 +31,12 @@ class MyBookmark extends Component {
   componentDidMount(){
 
     const id = parseURL(window.location.href).pathname.split("/")[1];
-    //console.log(id);
-    //console.log(parseURL(window.location.href).pathname.split("/").slice(-1)[0]);
     const selectedCategory = parseURL(window.location.href).pathname.split("/").slice(-1)[0];
-    console.log(id, selectedCategory);
+
     this.setState({userId: id});
     this.setState({selectedCategory: selectedCategory.toUpperCase()});
-    console.log(this.state.selectedCategory);
 
     axios.get("/api/name/" + id).then((res => {
-
-      //console.log(res.data);
 
       this.setState({userName: res.data});
 
@@ -49,17 +44,12 @@ class MyBookmark extends Component {
 
   axios.get("/api/save_entity/" + id).then((res) => {
 
-    console.log("mybookmark => componentDidMount")
-    //console.log(res);
-
     this.setState({bookmarkedItem: res.data});
-    //console.log(this.state.bookmarkedItem);
+
     })
   }
 
   toggleAddBookmark = () => {
-
-    console.log("clicked add bookmark");
 
     this.setState({
       isOpenAdd: !this.state.isOpenAdd
@@ -67,8 +57,6 @@ class MyBookmark extends Component {
   }
 
   toggleDeleteBookmark = (e) => {
-
-    console.log(e.target.id);
 
     this.setState({
       isOpenDelete: !this.state.isOpenDelete,
@@ -96,13 +84,10 @@ class MyBookmark extends Component {
 
     e.preventDefault();
 
-    console.log(e.target.id);
-
     let id = e.target.id;
 
     axios.delete("/api/remove_entity/" + id).then(res => {
 
-        console.log("data from remove entity (delete button)", res.data);
         this.setState({bookmarkedItem:res.data, isOpenDelete: false,})
 
     }).catch(err => console.log(err));
@@ -112,13 +97,9 @@ class MyBookmark extends Component {
 
     e.preventDefault();
 
-    console.log(e.target.id);
-
     let id = e.target.id;
 
     axios.post("/api/like/" + id).then(res => {
-
-      console.log("data returned from /api/like/", res.data);
 
       this.setState({bookmarkedItem:res.data})
 
@@ -132,13 +113,9 @@ class MyBookmark extends Component {
 
     e.preventDefault();
 
-        console.log(e.target.id);
-
         let id = e.target.id;
 
       axios.post("/api/dislike/" + id).then(res => {
-
-        console.log("data returned from /api/dislike/", res.data);
 
         this.setState({bookmarkedItem:res.data})
 
@@ -153,8 +130,6 @@ handleSubmitButton = (e) => {
 
   let id = e.target.id;
 
-  console.log(id);
-
   const {title, link, categories, description } = this.state;
 
   let item = {
@@ -166,11 +141,8 @@ handleSubmitButton = (e) => {
 
   }
 
-  console.log("item is:", item);
-
   axios.post("/api/save_entity/" + id, {item}).then(res => {
 
-    //console.log(res.data);
     this.setState({bookmarkedItem: res.data, isOpenAdd: false,})
 
   }).catch(err => console.log(err));

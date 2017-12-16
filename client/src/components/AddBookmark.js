@@ -3,8 +3,6 @@ import React, { Component } from "react";
 
 const AddBookmark = (props) => {
 
-  console.log("props passed to add bookmark:", props)
-
     // The gray background
     const backdropStyle = {
       position: 'fixed',
@@ -27,13 +25,7 @@ const AddBookmark = (props) => {
       top: 180,
       display: 'block'
     };
-/*
-    const closeButton= {
-      left:10
-    }
-*/
 
-    console.log(props);
 
     // Render nothing if the "show" prop is false
     if(!props.show) {
@@ -63,11 +55,4 @@ const AddBookmark = (props) => {
     }
   }
 
-{/*
-AddBookmark.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool,
-  children: PropTypes.node
-};
-*/}
 export default AddBookmark;

@@ -387,26 +387,7 @@ const CollectionList = (props) => {
 
     
 
-   
-      {/* <a href={"/"+ props.userId + "/mybookmark/express"}>
-        <div className="card collection-card">
-            <div className="img-container collection-img">
-              <img src="" alt="" />
-            </div>
-
-            <div className="card-body">
-              <a href={"/"+ props.userId + "/mybookmark/express"}>Express JS</a>
-
-              <div className="user">
-                <a href="#"><span>Chloe Chou</span></a>
-              </div>
-
-              <div className="file">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>10</span> files
-              </div>
-            </div>
-        </div>
-      </a>*/}
+  
 
         
     </div>

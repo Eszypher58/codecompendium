@@ -24,10 +24,7 @@ import HumorIMG from ".././assets/humor.png";
 
 const ExploreBookmarkList = (props) => {
 
-  console.log("this is the passed prop from mybookmark:", props);
-
-  //const collectionCategories = {REACT:ReactIMG, JAVASCRIPT:JavascriptIMG, NODE:NodejsIMG, EXPRESS:ExpressjsIMG};
-
+  
   let catImg = "";
 
   switch(props.category) {
@@ -115,11 +112,10 @@ const ExploreBookmarkList = (props) => {
       
 (bookmarkedItem.map(item => {
 
-console.log("This is item passed to map:", item);
+
 
 const {title, meta_tag_link, link, date, description, categories, like, dislike, _id} = item;
 
-console.log(categories.toUpperCase(), props.category);
 
 if (categories.toUpperCase() === props.category){
 

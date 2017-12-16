@@ -7,7 +7,7 @@ class SaveBookmark extends React.Component {
 
   render() {
 
-    console.log("props passed to deletebookmark:", this.props);
+    
     // Render nothing if the "show" prop is false
     if(!this.props.show) {
       return null;
