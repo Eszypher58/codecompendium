@@ -290,7 +290,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href={"explorebookmark/c++"}>C++</a>
+              <a href={"explorebookmark/cpp"}>C++</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
