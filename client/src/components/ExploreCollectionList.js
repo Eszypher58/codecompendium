@@ -210,7 +210,7 @@ const CollectionList = (props) => {
             </div>
 
             <div className="card-body">
-              <a href={"explorebookmark/database"}>Database</a>
+              <a href={"explorebookmark/databases"}>Database</a>
 
               <div className="user">
                 <a href="#"><span>{props.userName}</span></a>
