@@ -203,7 +203,7 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/database"}>
+      <a href={"/"+ props.userId + "/mybookmark/databases"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={DatabaseCol} alt="" />
@@ -283,7 +283,7 @@ const CollectionList = (props) => {
         </div>
       </a>
 
-      <a href={"/"+ props.userId + "/mybookmark/c++"}>
+      <a href={"/"+ props.userId + "/mybookmark/cpp"}>
         <div className="card collection-card">
             <div className="img-container collection-img">
               <img src={CPlusCol} alt="" />
