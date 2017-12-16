@@ -113,9 +113,9 @@ class ExploreBookmark extends Component {
 
     let id = e.target.id;
 
-    axios.post("/api/like/" + id).then(res => {
+    axios.post("/api/global_saved_item/like/" + id).then(res => {
 
-      console.log("data returned from /api/like/", res.data);
+      console.log("data returned from /api/global_saved_item/like/", res.data);
 
       this.setState({bookmarkedItem:res.data})
 
@@ -134,9 +134,9 @@ class ExploreBookmark extends Component {
     
             let id = e.target.id;
     
-          axios.post("/api/dislike/" + id).then(res => {
+          axios.post("/api/global_saved_item/dislike/" + id).then(res => {
     
-            console.log("data returned from /api/dislike/", res.data);
+            console.log("data returned from /api/global_saved_item/dislike/", res.data);
     
             this.setState({bookmarkedItem:res.data})
     

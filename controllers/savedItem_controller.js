@@ -309,6 +309,55 @@ router.get("/api/global_saved_item/:categories", function(req, res){
 
 })
 
+//this route increment like of a particular bookmark referenced by id and userId in explore page
+router.post("/api/global_saved_item/like/:id", function(req, res){
+    
+        console.log(req.params.id.split("&"));
+    
+        const id=req.params.id.split("&")[0];
+        const userId=req.params.id.split("&")[1];
+    
+        db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { like: 1 } }, { new: true }).then(function(doc){
+    
+            User.findOne({}).populate("savedItem").then(function(data){
+    
+                                //res.render("save", {data: data});
+                console.log(data.savedItem);
+                res.json(data.savedItem);
+    
+            })
+    
+        }).catch(err => console.log(err));
+    
+    })
+    
+    //this route increment dislike of a particular bookmark referenced by id and userId in explroe page
+    router.post("/api/global_saved_item/dislike/:id", function(req, res){
+    
+        console.log("hit dislike route");
+    
+        //console.log(req.params.id.split("&"));
+    
+        const id=req.params.id.split("&")[0];
+        const userId=req.params.id.split("&")[1];
+    
+    
+        db.SavedItem.findOneAndUpdate({ _id: id}, { $inc: { dislike: 1 } }, { new: true }).then(function(doc){
+    
+                            //console.log(doc);
+                            //res.json(doc);
+    
+            User.findOne({}).populate("savedItem").then(function(data){
+    
+                                    //res.render("save", {data: data});
+                                    //console.log(data.savedItem);
+                res.json(data.savedItem);
+    
+            })
+    
+        }).catch(err => console.log(err));
+    
+    })
 
 
 module.exports = router;
